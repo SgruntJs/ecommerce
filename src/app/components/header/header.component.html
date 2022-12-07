@@ -1,13 +1,19 @@
 <div class="header">
   <nav class="header_top">
     <div class="header_menu">
-     
       <img
         src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
         alt="Amazon logo"
         class="header_menu_logo"
       />
       <div class="header_menu_searchbar">
+          <div class="select">
+            <select>
+              <option value="tutte">Tutte le categorie</option>
+              <option value="{{category.value}}" *ngFor="let category of categories">{{category.viewValue}}</option>
+              
+            </select>
+          </div>
         <input type="text" class="header_menu_input" />
         <div class="header_menu_searchbar_icon">
           <mat-icon>search</mat-icon>
@@ -32,19 +38,20 @@
   </nav>
   <nav class="header_bottom">
     <div class="header_menu_icon" routerLink="/">
-        <mat-icon>menu</mat-icon> 
-        <span>Tutte</span> 
-      </div>
+      <mat-icon>menu</mat-icon>
+      <span>Tutte</span>
+    </div>
     <div class="header_bottom_nav">
-        <ul>
-            <li>Offerte di Natale</li>
-            <li>Buoni Reagalo</li>
-            <li>Bestseller</li>
-            <li>Amazon Basics</li>
-            <li>Novità</li>
-            <li>Servizio Clienti</li>
-            <li>Musica</li>
-        </ul>
+      <ul>
+        <li>Offerte di Natale</li>
+        <li>Buoni Reagalo</li>
+        <li>Bestseller</li>
+        <li>Amazon Basics</li>
+        <li>Novità</li>
+        <li>Servizio Clienti</li>
+        <li>Musica</li>
+      </ul>
     </div>
   </nav>
 </div>
+
