@@ -1,9 +1,7 @@
 <div class="header">
   <nav class="header_top">
     <div class="header_menu">
-      <div class="header_menu_icon" routerLink="/">
-        <mat-icon>menu</mat-icon>
-      </div>
+     
       <img
         src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
         alt="Amazon logo"
@@ -23,12 +21,30 @@
         <span class="header_menu_top_item">Resi</span>
         <span class="header_menu_bottom_item">e ordini</span>
       </div>
-      <div  routerLink="/checkout" class="header_menu_cart">
-        <mat-icon>shopping_cart</mat-icon>
-        <p class="header_cart_number">1</p>
+      <div routerLink="/checkout" class="header_menu_cart">
+        <div class="header-menu_cart_left">
+          <p class="header_cart_number">1</p>
+          <mat-icon>shopping_cart</mat-icon>
+        </div>
         <span class="header_cart_text">Carrello</span>
       </div>
     </div>
   </nav>
-  <nav class="header_bottom"></nav>
+  <nav class="header_bottom">
+    <div class="header_menu_icon" routerLink="/">
+        <mat-icon>menu</mat-icon> 
+        <span>Tutte</span> 
+      </div>
+    <div class="header_bottom_nav">
+        <ul>
+            <li>Offerte di Natale</li>
+            <li>Buoni Reagalo</li>
+            <li>Bestseller</li>
+            <li>Amazon Basics</li>
+            <li>Novità</li>
+            <li>Servizio Clienti</li>
+            <li>Musica</li>
+        </ul>
+    </div>
+  </nav>
 </div>
