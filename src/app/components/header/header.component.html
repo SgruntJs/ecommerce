@@ -7,34 +7,47 @@
         class="header_menu_logo"
       />
       <div class="header_menu_searchbar">
-          <div class="select">
-            <select>
-              <option value="tutte">Tutte le categorie</option>
-              <option value="{{category.value}}" *ngFor="let category of categories">{{category.viewValue}}</option>
-              
-            </select>
-          </div>
+        <div class="select" *ngIf="categories$ | async as categories">
+          <select>
+            <option value="tutte">Tutte le categorie</option>
+            <option
+              value="{{ category.value }}"
+              *ngFor="let category of categories"
+            >
+              {{ category.viewValue }}
+            </option>
+          </select>
+        </div>
         <input type="text" class="header_menu_input" />
         <div class="header_menu_searchbar_icon">
           <mat-icon>search</mat-icon>
         </div>
       </div>
-      <div class="header_menu_signin">
-        <span class="header_menu_top_item">Hello, accedi</span>
-        <span class="header_menu_bottom_item">Account e liste</span>
-      </div>
-      <div routerLink="/login" class="header_menu_signin">
-        <span class="header_menu_top_item">Resi</span>
-        <span class="header_menu_bottom_item">e ordini</span>
-      </div>
-      <div routerLink="/checkout" class="header_menu_cart">
-        <div class="header-menu_cart_left">
-          <p class="header_cart_number">1</p>
-          <mat-icon>shopping_cart</mat-icon>
+      
+        <div class="header_menu_signin">
+          <span class="header_menu_top_item">Hello, accedi</span>
+          <span class="header_menu_bottom_item">Account e liste</span>
         </div>
-        <span class="header_cart_text">Carrello</span>
+        <div routerLink="/login" class="header_menu_signin">
+          <span class="header_menu_top_item">Resi</span>
+          <span class="header_menu_bottom_item">e ordini</span>
+        </div>
+        <div routerLink="/checkout" class="header_menu_cart header_menu_signin">
+          <div class="header-menu_cart_left">
+            <div id="nav-cart-count-container">
+              <span
+                id="nav-cart-count"
+                aria-hidden="true"
+                class="nav-cart-count"
+                >12</span
+              >
+              <span class="nav-cart-icon nav-sprite"></span>
+            </div>
+          </div>
+          <span class="header_cart_text">Carrello</span>
+        </div>
       </div>
-    </div>
+    
   </nav>
   <nav class="header_bottom">
     <div class="header_menu_icon" routerLink="/">
@@ -54,4 +67,3 @@
     </div>
   </nav>
 </div>
-

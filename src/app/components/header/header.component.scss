@@ -12,6 +12,36 @@
   color: $white;
   padding-right: 8px;
   padding-bottom: 8px;
+  .nav-sprite {
+    background-image: url(../../../assets/images/amazon-sprite.png);
+    background-size: 350px;
+  }
+  .nav-cart-icon {
+    display: flex;
+    position: static;
+    float: none;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background-position: -10px -340px;
+    width: 38px;
+    height: 26px;
+  }
+  #nav-cart-count {
+    position: absolute;
+    left: 13px;
+    right: auto;
+    top: 8px;
+    justify-content: center;
+    display: flex;
+    position: static;
+    float: none;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    color: $darkOrange;
+    font-weight: bold;
+  }
 }
 .header_menu {
   display: flex;
@@ -41,13 +71,15 @@
   width: 100%;
 }
 .header_menu_searchbar_icon {
-  background-color: #febd69;
+  background-color: $orange;
   height: 40px;
-  width: 40px;
-  color: black;
+  width: 56px;
+  color: $black;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border-top-right-radius: 0.25em;
+  border-bottom-right-radius: 0.25em;
 }
 .header_menu_logo {
   object-fit: contain;
@@ -58,6 +90,11 @@
 .header_menu_signin {
   display: flex;
   flex-direction: column;
+  border: 1px solid transparent;
+  cursor: pointer;
+  &:hover {
+    border: 1px solid $white;
+  }
 }
 .header_menu_top_item {
   font-size: 10px;
@@ -67,12 +104,30 @@
   font-size: 13px;
   font-weight: 800;
 }
+.header_nav_tools {
+    display: flex; 
+    align-items: flex-end;
+}
 .header_menu_cart {
   display: flex;
   margin-top: 10px;
   margin-left: 8px;
-  height: 50px;
   justify-content: space-around;
+  flex-direction: row;
+  align-items: flex-end;
+
+  #nav-cart-count-container {
+    position: relative;
+    padding-bottom: 1px;
+
+    #nav-cart-count {
+      position: absolute;
+      left: 13px;
+      right: auto;
+      top: -5px;
+      justify-content: center;
+    }
+  }
 }
 .header_cart_number {
   color: #febd69;
@@ -105,7 +160,7 @@
       font-weight: bold;
     }
     &:hover {
-        border: 1px solid $white;
+      border: 1px solid $white;
     }
   }
   &_nav {
@@ -119,7 +174,7 @@
         padding: 8px 9px;
         border: 1px solid transparent;
         &:hover {
-            border: 1px solid $white;
+          border: 1px solid $white;
         }
       }
     }
@@ -135,92 +190,89 @@
   font-weight: 800;
 }
 
-
 ::ng-deep .mat-mdc-form-field {
-    
-    height: 63px;
+  height: 63px;
 }
 
 ::ng-deep .mdc-text-field {
-    border-top-right-radius: 0!important;
+  border-top-right-radius: 0 !important;
 }
 
-.mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined) .mat-mdc-form-field-infix {
-    padding-top: 18px!important;
+.mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined)
+  .mat-mdc-form-field-infix {
+  padding-top: 18px !important;
 }
 
 .mat-form-field-appearance-outline .mat-form-field-infix {
-    padding: 10px;
- }
- .mat-form-field-infix {
-      padding:0;
-      border-top: 0;
- }
- // new css select
+  padding: 10px;
+}
+.mat-form-field-infix {
+  padding: 0;
+  border-top: 0;
+}
+// new css select
 
- :root {
-    --background-gradient: linear-gradient(30deg, #f39c12 30%, #f1c40f);
-   
-  }
-  
-  select {
-    /* Reset Select */
-    appearance: none;
-    outline: 0;
-    border: 0;
-    box-shadow: none;
-    /* Personalize */
-    flex: 1;
-    padding: 0 1em;
-    color: $darkGrey;
-    background-image: none;
-    cursor: pointer;
-  }
-  /* Remove IE arrow */
-  select::-ms-expand {
-    display: none;
-  }
-  /* Custom Select wrapper */
-  .select {
-    position: relative;
-    display: flex;
-    width: 20em;
-    height: 40px;
-    border-top-left-radius: .25em;
-    border-bottom-left-radius: .25em;
-    overflow: hidden;
-    background-color: #f3f3f3;
-    color: #333;
-  }
-  /* Arrow */
-  .select::after {
-    content: '\25BC';
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 1em;
-    transition: .25s all ease;
-    pointer-events: none;
-  }
-  /* Transition */
-  .select:hover::after {
-    // color: #f39c12;
-  }
-  
-  /* Other styles*/
-  body {
-    color: $white;
-    background: var(--background-gradient);
-  }
-  h1 {
-    margin: 0 0 0.25em;
-  }
-  a {
-    font-weight: bold;
-    color: $grey;
-    text-decoration: none;
-    padding: .25em;
-    border-radius: .25em;
-    background: white;
-  }
-  
+:root {
+  --background-gradient: linear-gradient(30deg, #f39c12 30%, #f1c40f);
+}
+
+select {
+  /* Reset Select */
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  color: $darkGrey;
+  background-image: none;
+  cursor: pointer;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 40px;
+  border-top-left-radius: 0.25em;
+  border-bottom-left-radius: 0.25em;
+  overflow: hidden;
+  background-color: #f3f3f3;
+  color: #333;
+}
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  transition: 0.25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+  // color: #f39c12;
+}
+
+/* Other styles*/
+body {
+  color: $white;
+  background: var(--background-gradient);
+}
+h1 {
+  margin: 0 0 0.25em;
+}
+a {
+  font-weight: bold;
+  color: $grey;
+  text-decoration: none;
+  padding: 0.25em;
+  border-radius: 0.25em;
+  background: white;
+}

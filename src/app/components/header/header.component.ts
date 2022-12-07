@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { of } from 'rxjs';
 import { Category } from 'src/app/models/category';
 
 @Component({
@@ -15,6 +16,8 @@ export class HeaderComponent {
     {value: 'alexa-skill', viewValue: 'Alexa Skill'},
     {value: 'saab', viewValue: 'Alimentari e cura della casa'},
     {value: 'amazon-warehouse', viewValue: 'Amazon Warehouse'},
+    {value: 'film-tv', viewValue: 'Film e TV'},
   ];
 
+  categories$ = of(this.categories);
 }
