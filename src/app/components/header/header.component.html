@@ -1,18 +1,34 @@
 <div class="header">
-    <nav class="nav header_top">
-        <div class="header_menu">
-            <div class="header_menu_icon">
-                menu
-            </div>
-            <img src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="Amazon logo" class="header_menu_logo">
-            <div class="header_menu_searchbar">
-                <input type="text" class="header_menu_input">
-                <div class="header_menu_searchbar_icon">
-                    
-                </div>
-            </div>
+  <nav class="header_top">
+    <div class="header_menu">
+      <div class="header_menu_icon" routerLink="/">
+        <mat-icon>menu</mat-icon>
+      </div>
+      <img
+        src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
+        alt="Amazon logo"
+        class="header_menu_logo"
+      />
+      <div class="header_menu_searchbar">
+        <input type="text" class="header_menu_input" />
+        <div class="header_menu_searchbar_icon">
+          <mat-icon>search</mat-icon>
         </div>
-    
-    </nav>
-    <nav class="header_bottom"></nav>
+      </div>
+      <div class="header_menu_signin">
+        <span class="header_menu_top_item">Hello, accedi</span>
+        <span class="header_menu_bottom_item">Account e liste</span>
+      </div>
+      <div routerLink="/login" class="header_menu_signin">
+        <span class="header_menu_top_item">Resi</span>
+        <span class="header_menu_bottom_item">e ordini</span>
+      </div>
+      <div  routerLink="/checkout" class="header_menu_cart">
+        <mat-icon>shopping_cart</mat-icon>
+        <p class="header_cart_number">1</p>
+        <span class="header_cart_text">Carrello</span>
+      </div>
+    </div>
+  </nav>
+  <nav class="header_bottom"></nav>
 </div>
