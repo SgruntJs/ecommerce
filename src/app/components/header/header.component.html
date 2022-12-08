@@ -8,7 +8,7 @@
       />
       <div class="header_menu_searchbar" >
         <div class="select" *ngIf="categories$ | async as categories"  [class.nav-focus]='selectFocusClass'>
-          <select (focus)="selectFocusClass = true">
+          <select (focus)="selectFocusClass = true" (blur)="selectFocusClass = false">
             <option value="tutte">Tutte le categorie</option>
             <option
               value="{{ category.value }}"
