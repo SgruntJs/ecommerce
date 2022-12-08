@@ -6,9 +6,9 @@
         alt="Amazon logo"
         class="header_menu_logo"
       />
-      <div class="header_menu_searchbar">
-        <div class="select" *ngIf="categories$ | async as categories">
-          <select>
+      <div class="header_menu_searchbar" >
+        <div class="select" *ngIf="categories$ | async as categories"  [class.nav-focus]='selectFocusClass'>
+          <select (focus)="selectFocusClass = true">
             <option value="tutte">Tutte le categorie</option>
             <option
               value="{{ category.value }}"

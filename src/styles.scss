@@ -3,5 +3,9 @@ body {
     margin: 0px;
 }
 
+.nav-focus {
+    box-shadow: 0 0 0 2px #f90, 0 0 3px rgb(255 153 0 / 50%);
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
