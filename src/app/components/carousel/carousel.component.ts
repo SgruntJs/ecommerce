@@ -1,29 +1,49 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { Slide } from "src/app/models/slide";
-import { trigger, transition, style, animate } from "@angular/animations";
+import { slideIn, slideOut, scaleIn, scaleOut } from "./carousel.animations";
+import {
+  trigger,
+  transition,
+  style,
+  animate,
+  useAnimation,
+} from "@angular/animations";
 
 @Component({
   selector: "app-carousel",
   templateUrl: "./carousel.component.html",
   styleUrls: ["./carousel.component.scss"],
   animations: [
-    trigger('carouselAnimation', [
-      transition('void => *', [
-        style({ opacity: 0 }),
-        animate('300ms', style({ opacity: 1 }))
-      ]),
-      transition('* => void', [
-        animate('300ms', style({ opacity: 0 }))
-      ])
-    ])
-  ]
+     trigger("carouselAnimation", [
+    //   transition("void => *", [useAnimation(slideIn, {params: { time: '1300ms' }} )]),
+    //   transition("* => void", [useAnimation(slideOut, {params: { time: '1300ms' }})]),
+    // ]
+    transition(":enter", [
+      style({ transform: "translateX(-100%)" }),
+      animate("500ms ease-in", style({ transform: "translateX(0%)" })),
+    ]),
+    transition(":leave", [
+      animate("500ms ease-in", style({ transform: "translateX(100%)" })),
+    ]),
+  ],
+     )]
 })
-export class CarouselComponent {
+export class CarouselComponent implements OnInit {
   @Input() slides: Slide[] = [];
 
   currentSlide = 0;
 
   constructor() {}
+
+  ngOnInit() {
+    this.preloadImages(); // for the demo
+  }
+
+  preloadImages() {
+    for (const slide of this.slides) {
+      new Image().src = slide.url;
+    }
+  }
 
   onPreviousClick() {
     const previous = this.currentSlide - 1;
