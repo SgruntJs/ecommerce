@@ -134,3 +134,39 @@
 .a-carousel-goto-prevpage:focus {
   box-shadow: inset 0 0 0 2px $white, inset 0 0 0 4px $amazonBlue;
 }
+
+.FadeAway {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  background: linear-gradient(
+    top,
+    rgba(255, 255, 255, 255) 50%,
+    rgba(234, 237, 237, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(234, 237, 237, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(234, 237, 237, 1) 100%
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(234, 237, 237, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(234, 237, 237, 1) 110%
+  );
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#550000FF, endColorstr=#550000FF);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00ffffff, endColorstr=$darkGrey);
+}
