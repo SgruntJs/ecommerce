@@ -7,6 +7,7 @@ import {
   style,
   animate,
   useAnimation,
+  state,
 } from "@angular/animations";
 
 @Component({
@@ -14,23 +15,21 @@ import {
   templateUrl: "./carousel.component.html",
   styleUrls: ["./carousel.component.scss"],
   animations: [
-     trigger("carouselAnimation", [
-    //   transition("void => *", [useAnimation(slideIn, {params: { time: '1300ms' }} )]),
-    //   transition("* => void", [useAnimation(slideOut, {params: { time: '1300ms' }})]),
-    // ]
-    transition(":enter", [
-      style({ transform: "translateX(-100%)" }),
-      animate("500ms ease-in", style({ transform: "translateX(0%)" })),
-    ]),
-    transition(":leave", [
-      animate("500ms ease-in", style({ transform: "translateX(100%)" })),
-    ]),
-  ],
-     )]
+    trigger('slideInOut', [
+      transition(':enter', [
+        style({ transform: 'translateX({{direction}}%)' }),
+        animate('400ms ease-in', style({ transform: 'translateX(0%)' })),
+      ]),
+      transition(":leave", [
+        animate("400ms ease-in", style({ transform: "translateX(100%)" })),
+      ]),
+      
+    ])
+  ]
 })
 export class CarouselComponent implements OnInit {
   @Input() slides: Slide[] = [];
-
+  direction = 'RL';
   currentSlide = 0;
 
   constructor() {}
@@ -38,6 +37,8 @@ export class CarouselComponent implements OnInit {
   ngOnInit() {
     this.preloadImages(); // for the demo
   }
+
+  isOpen = true;
 
   preloadImages() {
     for (const slide of this.slides) {
@@ -49,11 +50,15 @@ export class CarouselComponent implements OnInit {
     const previous = this.currentSlide - 1;
     this.currentSlide = previous < 0 ? this.slides.length - 1 : previous;
     console.log("previous clicked, new current slide is: ", this.currentSlide);
+    this.isOpen = !this.isOpen;
+    this.direction = 'RR';
   }
 
   onNextClick() {
     const next = this.currentSlide + 1;
     this.currentSlide = next === this.slides.length ? 0 : next;
     console.log("next clicked, new current slide is: ", this.currentSlide);
+    this.isOpen = this.isOpen;
+    this.direction = 'RL';
   }
 }

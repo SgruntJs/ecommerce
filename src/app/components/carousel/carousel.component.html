@@ -5,7 +5,8 @@
         *ngIf="i === currentSlide"
         [src]="slide.url"
         class="slide"
-        @carouselAnimation
+        [@slideInOut]="{ value: '', 
+ params: { direction: this.direction === 'RL' ? '100' : '-100' } }"
       />
     </ng-container>
   
