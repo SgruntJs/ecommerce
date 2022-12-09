@@ -2,14 +2,16 @@ $white: #fff;
 $black: #0f1111;
 $orange: #febd69;
 $darkOrange: #f08804;
+$lightGrey: #eaeded;
 $grey: #34495e;
 $darkGrey: #2c3e50;
 $primary: rgb(182, 157, 230);
+$amazonBlue: #008296;
 
 $breakpoints: (
   "small": 767px,
   "medium": 992px,
-  'desktop': 1023px,
+  "desktop": 1023px,
   "large": 1200px,
 ) !default;
 
@@ -33,11 +35,14 @@ $breakpoints: (
   }
 }
 
-.main {
-  width: 100%;
-  @include respond-to(desktop) {
-    max-width: 1480px;
+
+  .main {
     width: 100%;
-    margin: 0 auto;
+
+    @include respond-to(desktop) {
+      max-width: 1480px;
+      width: 100%;
+      margin: 0 auto;
+    }
   }
-}
+
