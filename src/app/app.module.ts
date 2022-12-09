@@ -14,13 +14,17 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 //import { CarouselComponent } from './components/carousel/carousel.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CarouselModule } from './components/carousel/carousel.module';
+import { CardListComponent } from './components/card-list/card-list.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     // CarouselComponent,
-    HomeComponent
+    HomeComponent,
+    CardListComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
