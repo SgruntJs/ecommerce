@@ -15,6 +15,9 @@ export class HomeComponent {
     {
       url: "/assets/images/banner2.jpg", title: "banner 2"
     },
+    {
+      url: "/assets/images/banner3.jpg", title: "banner 3"
+    },
   ]
 
 }
