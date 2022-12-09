@@ -21,7 +21,7 @@ import {
         animate('400ms ease-in', style({ transform: 'translateX(0%)' })),
       ]),
       transition(":leave", [
-        animate("400ms ease-in", style({ transform: "translateX(100%)" })),
+        animate("400ms ease-in", style({ transform: "translateX({{directionLeave}})" })),
       ]),
       
     ])
@@ -30,6 +30,7 @@ import {
 export class CarouselComponent implements OnInit {
   @Input() slides: Slide[] = [];
   direction = 'RL';
+  directionLeave = 'RL';
   currentSlide = 0;
 
   constructor() {}
@@ -52,6 +53,7 @@ export class CarouselComponent implements OnInit {
     console.log("previous clicked, new current slide is: ", this.currentSlide);
     this.isOpen = !this.isOpen;
     this.direction = 'RR';
+    this.directionLeave = 'RR';
   }
 
   onNextClick() {
@@ -60,5 +62,6 @@ export class CarouselComponent implements OnInit {
     console.log("next clicked, new current slide is: ", this.currentSlide);
     this.isOpen = this.isOpen;
     this.direction = 'RL';
+    this.directionLeave = 'RL';
   }
 }
