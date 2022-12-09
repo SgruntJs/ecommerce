@@ -1,75 +1,157 @@
 @import "../../../assets/common/styles.scss";
 :host {
-    flex: 1;
+  flex: 1;
+}
+
+.carousel {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.control {
+  border: none;
+  background-color: transparent;
+  outline: 0; // remove blue outline border, but make sure they are still focussable for accessibility
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5em;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  user-select: none;
+  height: 100%;
+  opacity: 80%;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
   }
-  
-  .carousel {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
+
+  /* Position the buttons */
+  &.next {
+    right: 0;
   }
-  
-  .slide {
+  &.prev {
+    left: 0;
+  }
+}
+
+/* style the arrows */
+.arrow {
+  display: block;
+  border-left: 0.1em solid white;
+  border-bottom: 0.1em solid white;
+  width: 0.5em;
+  height: 0.5em;
+  background-image: url("https://m.media-amazon.com/images/S/sash/ydDD9hnRfziI$y7.png");
+
+  &.left {
+    transform: rotate(45deg);
+  }
+  &.right {
+    transform: rotate(225deg);
+  }
+  // add new css
+  .a-carousel-left,
+  .a-carousel-right {
+    max-height: 250px;
+  }
+  .a-carousel-rounded-buttons .a-carousel-left,
+  .a-carousel-rounded-buttons .a-carousel-right {
+    width: 80px;
+    position: absolute;
+  }
+  .a-carousel-goto-prevpage {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    // zoom effect on hover
-    // transition: transform 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+    right: 0;
+    bottom: 0;
+    outline: 0;
+    border-radius: 5px;
   }
-  
+}
 
-  
-  // =========================
-  // Next and Prev buttons
-  // =========================
-  .control {
-    border: none;
-    background-color: transparent;
-    outline: 0; // remove blue outline border, but make sure they are still focussable for accessibility
-    position: absolute;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0.5em;
-    color: white;
-    font-weight: bold;
-    font-size: 3em;
-    user-select: none;
+// add new css
+.a-carousel-left,
+.a-carousel-right {
+  max-height: 250px;
+}
+
+
+.a-carousel-left, .a-carousel-right {
+    width: 40px;
     height: 100%;
-    opacity: 80%;
-    // opacity effect on hover
-    transition: opacity 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
-  
-    &:hover, &:focus {
-      opacity: 1;
-    }
-  
-    /* Position the buttons */
-    &.next {
-      right: 0;
-    }
-    &.prev {
-      left: 0;
-    }
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+.a-carousel-left,.a-carousel-right {
+    width: 80px;
+    position: absolute;
   }
-  
-  /* style the arrows */
-  .arrow {
+.a-carousel-goto-prevpage, .a-carousel-goto-nextpage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  outline: 0;
+  border-radius: 5px;
+}
+
+.a-icon-previous-rounded, .a-icon-next-rounded {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+
+.a-icon-alt {
+    position: absolute;
+    left: -9999px;
+    top: auto;
     display: block;
-    border-left: 0.1em solid white;
-    border-bottom: 0.1em solid white;
-    width: 0.5em;
-    height: 0.5em;
-  
-    &.left {
-      transform: rotate(45deg);
-    }
-    &.right {
-      transform: rotate(225deg);
-    }
-  }
+    width: 1px;
+    height: 1px;
+    line-height: 1px;
+    font-size: 1px;
+    overflow: hidden;
+}
+
+.a-icon.a-icon-next-rounded, .a-icon.a-icon-previous-rounded {
+    background-size: 68px 52px;
+    width: 34px;
+    height: 52px;
+    outline: 0;
+}
+
+.a-icon.a-icon-next-rounded, .a-icon.a-icon-previous-rounded {
+    background-image: url('https://m.media-amazon.com/images/S/sash/ydDD9hnRfziI$y7.png');
+}
+
+.a-carousel-right {
+    text-align: right;
+    right: 0;
+    padding-right: 3px;
+}
+
+.a-icon.a-icon-next-rounded {
+    background-position: -34px 0;
+}
