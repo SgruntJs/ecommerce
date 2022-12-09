@@ -155,3 +155,7 @@
 .a-icon.a-icon-next-rounded {
     background-position: -34px 0;
 }
+
+.a-carousel-goto-nextpage:focus, .a-carousel-goto-prevpage:focus {
+    box-shadow: inset 0 0 0 2px #fff, inset 0 0 0 4px #008296;
+}
