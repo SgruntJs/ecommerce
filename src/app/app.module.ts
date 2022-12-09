@@ -11,14 +11,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { CarouselComponent } from './components/carousel/carousel.component';
+//import { CarouselComponent } from './components/carousel/carousel.component';
 import { HomeComponent } from './pages/home/home.component';
+import { CarouselModule } from './components/carousel/carousel.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    CarouselComponent,
+    // CarouselComponent,
     HomeComponent
   ],
   imports: [
@@ -30,6 +31,7 @@ import { HomeComponent } from './pages/home/home.component';
     MatSelectModule,
     FormsModule,
     MatFormFieldModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

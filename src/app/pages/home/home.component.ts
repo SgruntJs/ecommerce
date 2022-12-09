@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Slide } from 'src/app/models/slide';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+
+  slides: Slide[] = [
+    {
+      url: "/assets/images/banner1.jpg", title: "banner 1"
+    },
+    {
+      url: "/assets/images/banner2.jpg", title: "banner 2"
+    },
+  ]
 
 }
