@@ -21,7 +21,7 @@ import {
         animate('400ms ease-in', style({ transform: 'translateX(0%)' })),
       ]),
       transition(":leave", [
-        animate("400ms ease-in", style({ transform: "translateX({{directionLeave}})" })),
+        animate("400ms ease-in", style({ transform: "translateX({{directionLeave}}%)" })),
       ]),
       
     ])
