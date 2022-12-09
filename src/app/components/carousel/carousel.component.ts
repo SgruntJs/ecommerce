@@ -16,12 +16,13 @@ import {
   styleUrls: ["./carousel.component.scss"],
   animations: [
     trigger('slideInOut', [
+      state('in', style({ transform: 'translateX(0)' })),
       transition(':enter', [
         style({ transform: 'translateX({{direction}}%)' }),
-        animate('400ms ease-in', style({ transform: 'translateX(0%)' })),
+        animate('300ms ease-in-out', style({ transform: 'translateX(0%)' })),
       ]),
       transition(":leave", [
-        animate("400ms ease-in", style({ transform: "translateX({{directionLeave}}%)" })),
+        animate("300ms ease-in-out", style({ transform: "translateX({{directionLeave}}%)" })),
       ]),
       
     ])
@@ -29,8 +30,8 @@ import {
 })
 export class CarouselComponent implements OnInit {
   @Input() slides: Slide[] = [];
-  direction = 'RL';
-  directionLeave = 'RL';
+  direction = '0';
+  directionLeave = '0';
   currentSlide = 0;
 
   constructor() {}
@@ -52,8 +53,8 @@ export class CarouselComponent implements OnInit {
     this.currentSlide = previous < 0 ? this.slides.length - 1 : previous;
     console.log("previous clicked, new current slide is: ", this.currentSlide);
     this.isOpen = !this.isOpen;
-    this.direction = 'RR';
-    this.directionLeave = 'RR';
+    this.direction = '-100';
+    this.directionLeave = '100';
   }
 
   onNextClick() {
@@ -61,7 +62,7 @@ export class CarouselComponent implements OnInit {
     this.currentSlide = next === this.slides.length ? 0 : next;
     console.log("next clicked, new current slide is: ", this.currentSlide);
     this.isOpen = this.isOpen;
-    this.direction = 'RL';
-    this.directionLeave = 'RL';
+    this.direction = '100';
+    this.directionLeave = '-100';
   }
 }
