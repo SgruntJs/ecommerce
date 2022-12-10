@@ -1,9 +1,23 @@
 @import "../../../assets/common/styles.scss";
-.card-list__item {
-  background: white;
+:host {
+  padding: 20px 0 15px 0;
   margin-bottom: 2em;
-  a {
-    color: black;
+  height: 420px;
+  min-height: 420px;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 400px;
+  flex-basis: 33.33333%;
+  min-width: 290px;
+  flex: 1 0 290px;
+}
+.card-list__item {
+    padding: 1.4em;
+    display: flex;
+    flex-direction: column;
+    background: $white;
+  p a {
+    color: $black;
     text-decoration: none;
     &:hover {
       box-shadow: 3px 3px 8px hsl(0, 0%, 80%);
@@ -12,19 +26,23 @@
 }
 
 .card-list__item__content {
-  padding: 1.4em;
-  display: flex;
-  flex-direction: column;
+
+  &__body {
+    background: $white;
+    height: 100%;
+    position: relative;
+    margin-bottom: 0;
+    margin-top: 0;
+    overflow: hidden;
+    padding-top: 20px;
+  }
+  &__link {
+    color: $link;
+    cursor: pointer;
+  }
   h2 {
     margin-top: 0;
     margin-bottom: 0.5em;
     font-weight: bold;
   }
-}
-
-
-/* Flexbox stuff */
-
-.card-list__item {
-  flex: 0 1 24%;
 }
