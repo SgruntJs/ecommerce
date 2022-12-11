@@ -1,7 +1,7 @@
-export interface Card {
-    url: string;
-    title: string;
-    seeMore: string;
-    thumb: string;
-    type: string;
+export class Card {
+    id!: string;
+    title!: string;
+    seeMore!: string;
+    thumb!: string;
+    type!: string;// deal, default o sponsor
 }
