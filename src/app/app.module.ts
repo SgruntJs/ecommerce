@@ -16,6 +16,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { CarouselModule } from './components/carousel/carousel.module';
 import { CardListComponent } from './components/card-list/card-list.component';
 import { CardComponent } from './components/card/card.component';
+import { SideNavComponent } from './components/side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CardComponent } from './components/card/card.component';
     // CarouselComponent,
     HomeComponent,
     CardListComponent,
-    CardComponent
+    CardComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,
