@@ -23,11 +23,37 @@
   }
   &-right {
     cursor: pointer;
-
     .side-customer-name {
       font-weight: 700;
       font-size: 19px;
       line-height: 25px;
+    }
+  }
+}
+.menu-content {
+  .menu {
+    list-style: none;
+    padding-inline-start: 0px;
+    .menu-item {
+      padding-right: 20px;
+      padding-left: 36px;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      cursor: pointer;
+      &:hover {
+        background-color: #eaeded;
+        color: #111;
+      }
+      &.menu-title {
+        padding-bottom: 5px;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        color: $textBlack;
+        text-transform: capitalize;
+        display: inline-block;
+        pointer-events: none;
+      }
     }
   }
 }
