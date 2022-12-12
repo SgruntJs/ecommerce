@@ -1,16 +1,26 @@
 import { Component } from "@angular/core";
 import { of } from "rxjs";
 import { Category } from "src/app/models/category";
+import { NavigationService } from "src/app/services/navigation/navigation.service";
 
 @Component({
   selector: "app-header",
   templateUrl: "./header.component.html",
-  styleUrls: ["./header.component.scss"],
+  styleUrls: ["./header.component.scss"]
 })
 export class HeaderComponent {
   selectedValue!: string;
   selectedCar!: string;
   selectFocusClass = false;
+
+  constructor(private navService: NavigationService) { }
+
+  ngOnInit(): void {
+  }
+
+  toggleSideNav() {
+    this.navService.setShowNav(true);
+  }
 
   categories: Category[] = [
     { value: "alexa-skill", viewValue: "Alexa Skill" },
