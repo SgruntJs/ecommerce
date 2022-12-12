@@ -116,13 +116,16 @@
     will-change: transform;
     visibility: hidden;
 
-  .menu-translateX-right {
+  &.menu-translateX-right {
     transform: translateX(100%);
+    transition: all .2s ease-in-out;
   }
-  .menu-translateX {
+  &.menu-translateX {
     transform: translateX(0);
+    transition: all .2s ease-in-out;
   }
-  .menu-translateX-left {
+  &.menu-translateX-left {
     transform: translateX(-100%);
+    transition: all .2s ease-in-out;
   }
 }

@@ -109,4 +109,13 @@ export class SideNavContentComponent {
       this.renderer.addClass(second,'menu-visible');
       this.renderer.removeClass(second,'menu-translateX-right');
   }
+  backFirst() {
+    const first = this.firstLevel.nativeElement;
+    const second = this.secondLevel.nativeElement;
+    this.renderer.removeClass(first,'menu-translateX-left');
+    this.renderer.addClass(first,'menu-visible');
+    this.renderer.removeClass(second,'menu-translateX');
+    this.renderer.removeClass(second,'menu-visible');
+    this.renderer.addClass(second,'menu-translateX-right');
+  }
 }
