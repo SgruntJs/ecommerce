@@ -37,7 +37,35 @@ export class CardListComponent {
       title: "Aiutiamo le imprese a crescere",
       seeMore: "Scopri di più",
       type: "deal"
-    }
+    },
+    {
+      id: "5",
+      thumb: "https://images-eu.ssl-images-amazon.com/images/G/29/Events/2022/Xmas/Homepage/XCM_CUTTLE_1488286_2673650_758x608_2X_it_IT._SY608_CB607948390_.jpg", 
+      title: "Regali di Natale per tutti",
+      seeMore: "Scopri il Negozio di Natale",
+      type: "deal"
+    },
+    {
+      id: "6",
+      thumb: "https://images-eu.ssl-images-amazon.com/images/G/29/Events/2022/Xmas/Homepage/XCM_CUTTLE_1488286_2673650_758x608_2X_it_IT._SY608_CB607948390_.jpg", 
+      title: "Regali di Natale per tutti",
+      seeMore: "Scopri il Negozio di Natale",
+      type: "deal"
+    },
+    {
+      id: "7",
+      thumb: "https://images-eu.ssl-images-amazon.com/images/G/29/Renewed/Desktop_758x608_2X._SY608_CB605045903_.jpg", 
+      title: "Prodotti ricondizionati : meglio per il pianeta",
+      seeMore: "Scopri il Negozio di Natale",
+      type: "deal"
+    },
+    {
+      id: "8",
+      thumb: "https://images-eu.ssl-images-amazon.com/images/G/29/Events/2022/Xmas/Homepage/XCM_CUTTLE_1488286_2673650_758x608_2X_it_IT._SY608_CB607948390_.jpg", 
+      title: "Regali di Natale per tutti",
+      seeMore: "Scopri il Negozio di Natale",
+      type: "deal"
+    },
   ];
 
 
