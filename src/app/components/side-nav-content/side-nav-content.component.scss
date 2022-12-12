@@ -3,6 +3,9 @@
 :host {
   position: relative;
 }
+* {
+    font-family: "Amazon Regular";
+}
 
 .side-customer-profile {
   background-color: $amazonDark;
