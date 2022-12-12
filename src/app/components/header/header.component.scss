@@ -5,17 +5,13 @@
   top: 0;
 }
 .header_top {
-  height: 60px;
+  height: 55px;
   background-color: $black;
   font-size: 14px;
   display: flex;
   color: $white;
   padding-right: 8px;
-  padding-bottom: 8px;
-  .nav-sprite {
-    background-image: url(../../../assets/images/amazon-sprite.png);
-    background-size: 350px;
-  }
+  
   .nav-cart-icon {
     display: flex;
     position: static;
@@ -45,7 +41,7 @@
 }
 .header_menu {
   display: flex;
-  padding: 10px 8px 8px 8px;
+  padding: 0px 8px 5px 8px;
   width: 100%;
 }
 .header_menu > div {
@@ -245,13 +241,16 @@ select::-ms-expand {
 .select {
   position: relative;
   display: flex;
-  width: 20em;
+  
   height: 40px;
   border-top-left-radius: 0.25em;
   border-bottom-left-radius: 0.25em;
   overflow: hidden;
   background-color: #f3f3f3;
   color: #333;
+  @include respond-to(desktop) {
+    width: 20em;
+  }
 }
 /* Arrow */
 .select::after {

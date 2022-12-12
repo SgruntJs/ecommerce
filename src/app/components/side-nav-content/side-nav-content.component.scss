@@ -34,26 +34,45 @@
   .menu {
     list-style: none;
     padding-inline-start: 0px;
-    .menu-item {
-      padding-right: 20px;
-      padding-left: 36px;
-      padding-top: 13px;
-      padding-bottom: 13px;
-      cursor: pointer;
-      &:hover {
-        background-color: #eaeded;
-        color: #111;
+    li {
+      padding-bottom: 2px;
+      .menu-item {
+        padding-right: 20px;
+        padding-left: 36px;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        cursor: pointer;
+        display: flex;
+        &:hover {
+          background-color: $lightGrey;
+          color: $amazonDark;
+          .menu-arrow-next {
+            background-position: -166px -288px;
+          }
+        }
+        &.menu-title {
+          padding-bottom: 5px;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 24px;
+          color: $textBlack;
+          text-transform: capitalize;
+          display: inline-block;
+          pointer-events: none;
+        }
+        .menu-arrow-next {
+          background-position: -137px -288px;
+          margin-left: auto;
+          width: 10px;
+          height: 14px;
+          transform: scaleX(1);
+        }
       }
-      &.menu-title {
-        padding-bottom: 5px;
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 24px;
-        color: $textBlack;
-        text-transform: capitalize;
-        display: inline-block;
-        pointer-events: none;
-      }
+    }
+    .menu-separator {
+      border-bottom: 1px solid #d5dbdb;
+      padding: 0;
+      margin: 5px 0;
     }
   }
 }
