@@ -1,17 +1,19 @@
-<article class="card-list__item">
+<article class="card-list__item" *ngIf="data.type === 'default'">
   <div class="card-list__item__content">
+    <div class="card-list__top">
+      <h2>{{ data.title }}</h2>
+    </div>
+
     <div class="card-list__item__content__body">
-    <h2>{{data.title}}</h2>
-    <div class="card-list__item__image">
-    <div class="thumbnail">
-      <img
-        src="{{data.thumb}}"
-        alt="card 1"
-      />
+      <div class="card-list__item__image">
+        <div class="thumbnail">
+          <img src="{{ data.thumb }}" alt="card 1" />
+        </div>
+      </div>
+    </div>
+    <div class="card-list__bottom">
+      <span class="card-list__item__content__link">{{ data.seeMore }}</span>
     </div>
   </div>
-    <span class="card-list__item__content__link">{{data.seeMore}}</span>
-  </div>
-</div>
   <!-- .card-content -->
 </article>
