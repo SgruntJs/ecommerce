@@ -9,7 +9,31 @@
   </div>
 </div>
 <div class="menu-content">
-  <ul class="menu menu-visible">
+  <ul class="menu" *ngIf="sidenav$ | async as sidenav">
+    <ng-container *ngFor="let item of sidenav">
+      <li *ngIf="item.isHighlight">
+        <div class="menu-item menu-title">{{ item.text }}</div>
+      </li>
+      <li
+        *ngIf="
+          !item.isHighlight && !item.isSeparator && item.subMenu.length === 0
+        "
+      >
+        <div class="menu-item">{{ item.text }}</div>
+      </li>
+      <li
+        *ngIf="item.isSeparator && !item.isHighlight"
+        class="menu-separator"
+      ></li>
+      <li *ngIf="item.subMenu.length > 0">
+        <div class="menu-item">
+          <div>{{ item.text }}</div>
+          <i class="nav-sprite menu-arrow-next"></i>
+        </div>
+      </li>
+    </ng-container>
+  </ul>
+  <!--<ul class="menu menu-visible">
     <li>
       <div class="menu-item menu-title">di tendenza</div>
     </li>
@@ -115,5 +139,12 @@
           <i class="nav-sprite menu-arrow-next"></i>
         </div>
       </li>
+  </ul>-->
+  <ul class="menu menu-translateX-right">
+    <li>
+      <div class="menu-item menu-back-button">
+        <i class="nav-sprite menu-arrow-prev"></i>menu principale
+      </div>
+    </li>
   </ul>
 </div>

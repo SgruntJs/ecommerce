@@ -4,7 +4,6 @@
   position: relative;
 }
 
-
 .side-customer-profile {
   background-color: $amazonDark;
   height: 50px;
@@ -28,7 +27,7 @@
       font-weight: 700;
       font-size: 18px;
       line-height: 25px;
-      letter-spacing: 1px;;
+      letter-spacing: 1px;
     }
   }
 }
@@ -47,13 +46,28 @@
         padding-bottom: 13px;
         cursor: pointer;
         display: flex;
-        &:hover {
-          background-color: $lightGrey;
-          color: $amazonDark;
-          .menu-arrow-next {
-            background-position: -166px -288px;
+   
+        &.menu-back-button {
+          border-bottom: 1px solid #d5dbdb;
+          text-transform: uppercase;
+          .menu-arrow-prev {
+            background-position: -137px -310px;
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+            transform: scaleX(1);
           }
         }
+        &:hover {
+            background-color: $lightGrey;
+            color: $amazonDark;
+            .menu-arrow-next {
+              background-position: -166px -288px;
+            }
+            .menu-arrow-prev {
+              background-position: -166px -310px;
+            }
+          }
         &.menu-title {
           padding-bottom: 5px;
           font-size: 18px;
