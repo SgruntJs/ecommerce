@@ -32,11 +32,17 @@
   }
 }
 .menu-content {
+  position: relative;
+  overflow-x: hidden;
+  height: 100%;
   .menu {
     list-style: none;
     padding-inline-start: 0px;
     font-size: 14px;
     line-height: 16px;
+    &.menu-visible {
+      visibility: visible;
+    }
     li {
       padding-bottom: 2px;
       .menu-item {
@@ -46,7 +52,7 @@
         padding-bottom: 13px;
         cursor: pointer;
         display: flex;
-   
+
         &.menu-back-button {
           border-bottom: 1px solid #d5dbdb;
           text-transform: uppercase;
@@ -59,15 +65,15 @@
           }
         }
         &:hover {
-            background-color: $lightGrey;
-            color: $amazonDark;
-            .menu-arrow-next {
-              background-position: -166px -288px;
-            }
-            .menu-arrow-prev {
-              background-position: -166px -310px;
-            }
+          background-color: $lightGrey;
+          color: $amazonDark;
+          .menu-arrow-next {
+            background-position: -166px -288px;
           }
+          .menu-arrow-prev {
+            background-position: -166px -310px;
+          }
+        }
         &.menu-title {
           padding-bottom: 5px;
           font-size: 18px;
@@ -92,5 +98,31 @@
       padding: 0;
       margin: 5px 0;
     }
+  }
+}
+
+//menu translate X
+
+.menu {
+    padding-top: 7px;
+    padding-bottom: 30px;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow: scroll;
+    will-change: transform;
+    visibility: hidden;
+
+  .menu-translateX-right {
+    transform: translateX(100%);
+  }
+  .menu-translateX {
+    transform: translateX(0);
+  }
+  .menu-translateX-left {
+    transform: translateX(-100%);
   }
 }
