@@ -13,11 +13,11 @@
     [ngStyle]="getSideNavBarStyle((showSideNav | async) || false)">
         <!-- https://stackoverflow.com/questions/61780339/angular-ivy-stricttemplates-true-type-boolean-null-is-not-assignable-to-type-->
         <!-- close button -->
-        <div><span class="material-icons side-nav-bar-close" (click)="onSidebarClose()">clear</span></div>
+        <div class="side-nav-icon"><span class="material-icons side-nav-bar-close" (click)="onSidebarClose()">clear</span></div>
 
         <!-- side bar content -->
         <div class="side-nav-bar-content-container">
-            <ng-container *ngTemplateOutlet="sidenavTemplateRef">dssdsd</ng-container>
+            <ng-container *ngTemplateOutlet="sidenavTemplateRef"></ng-container>
         </div>
     </div>
 </div>

@@ -1,10 +1,12 @@
 <app-side-nav
   [sidenavTemplateRef]="navContent"
   direction="{{'left'}}"
-  [navWidth]="280"
+  [navWidth]="365"
   [duration]="0.5"
 ></app-side-nav>
 <app-header></app-header>
 
 <router-outlet></router-outlet>
-<ng-template #navContent> Side Nav Bar Content Here </ng-template>
+<ng-template #navContent> 
+    <app-side-nav-content></app-side-nav-content>
+</ng-template>

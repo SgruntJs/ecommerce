@@ -1,0 +1,19 @@
+@import "../../../assets/common/styles.scss";
+
+:host {
+  position: relative;
+}
+
+.side-customer-profile {
+  background-color: $amazonDark;
+  height: 50px;
+  align-items: center;
+  color: $white;
+  display: flex;
+  &-left {
+    background-image: url(../../../assets/images/amazon-sprite.png);
+    background-size: 350px;
+    margin: 0 10px 0 36px;
+    background-position: -137px -340px;
+  }
+}
