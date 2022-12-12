@@ -9,6 +9,8 @@ import { NavigationService } from "src/app/services/navigation/navigation.servic
   styleUrls: ["./header.component.scss"]
 })
 export class HeaderComponent {
+
+  lang = '.it';// dovrebbe cambiare a seconda della nazione
   selectedValue!: string;
   selectedCar!: string;
   selectFocusClass = false;

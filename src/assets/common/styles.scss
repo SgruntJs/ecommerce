@@ -20,7 +20,6 @@ $breakpoints: (
   "large": 1200px,
 ) !default;
 
-
 /// Mixin to manage responsive breakpoints
 /// @author Kitty Giraudel
 /// @param {String} $breakpoint - Breakpoint name
@@ -40,20 +39,23 @@ $breakpoints: (
           + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }
+body {
+  font-family: "Amazon Regular";
+}
 
+.main {
+  width: 100%;
 
-  .main {
+  @include respond-to(desktop) {
+    max-width: 1480px;
     width: 100%;
-
-    @include respond-to(desktop) {
-      max-width: 1480px;
-      width: 100%;
-      margin: 0 auto;
-    }
+    margin: 0 auto;
   }
+}
 
-  .nav-sprite {
-    background-image: url('../../assets/images/amazon-sprite.png');
-    background-size: 350px;
-  }
+.nav-sprite {
+  background-image: url("../../assets/images/amazon-sprite.png");
+  background-size: 350px;
+}
+
 

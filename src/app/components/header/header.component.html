@@ -1,11 +1,13 @@
 <div class="header">
   <nav class="header_top">
-    <div class="header_menu">
-      <img
-        src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
-        alt="Amazon logo"
-        class="header_menu_logo"
-      />
+    <div class="header_menu">     
+      <div id="nav-logo">
+        <div class="nav-logo-link nav-progressive-attribute">
+          <span class="nav-sprite nav-logo-base"></span>
+          <span id="logo-ext" class="nav-sprite nav-logo-ext nav-progressive-content"></span>
+          <span class="nav-logo-locale">{{lang}}</span>
+        </div>
+      </div>
       <div class="header_menu_searchbar" >
         <div class="select" *ngIf="categories$ | async as categories"  [class.nav-focus]='selectFocusClass'>
           <select (focus)="selectFocusClass = true" (blur)="selectFocusClass = false">
