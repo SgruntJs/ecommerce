@@ -1,4 +1,4 @@
-@import "./fonts.scss";
+
 
 $white: #fff;
 $black: #0f1111;
@@ -39,9 +39,7 @@ $breakpoints: (
           + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }
-body {
-  font-family: "Amazon Regular";
-}
+
 
 .main {
   width: 100%;

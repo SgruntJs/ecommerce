@@ -1,7 +1,13 @@
+
+@import "./assets/common/fonts.scss";
+
 body {
     margin: 0px;
     background-color: #eaeded;
+    font-family: "Amazon Regular"!important;
 }
+
+
 
 .nav-focus {
     box-shadow: 0 0 0 2px #f90, 0 0 3px rgb(255 153 0 / 50%);
