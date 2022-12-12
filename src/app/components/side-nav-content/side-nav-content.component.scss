@@ -11,9 +11,23 @@
   color: $white;
   display: flex;
   &-left {
-    background-image: url(../../../assets/images/amazon-sprite.png);
-    background-size: 350px;
-    margin: 0 10px 0 36px;
-    background-position: -137px -340px;
+    cursor: pointer;
+    .side-customer-icon {
+      background-image: url(../../../assets/images/amazon-sprite.png);
+      background-size: 350px;
+      margin: 0 10px 0 36px;
+      background-position: -137px -340px;
+      height: 25px;
+      width: 27px;
+    }
+  }
+  &-right {
+    cursor: pointer;
+
+    .side-customer-name {
+      font-weight: 700;
+      font-size: 19px;
+      line-height: 25px;
+    }
   }
 }
