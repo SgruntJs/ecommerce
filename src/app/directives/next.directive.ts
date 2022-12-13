@@ -1,4 +1,4 @@
-import { Directive, ElementRef } from '@angular/core';
+import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appNext]'
@@ -6,7 +6,14 @@ import { Directive, ElementRef } from '@angular/core';
 export class NextDirective {
 
   constructor(private el: ElementRef) { 
-    console.log(this.el.nativeElement);
+    
+  }
+
+  @HostListener('click')
+  nextFunc() {
+    const element = this.el.nativeElement.parentElement.children[0];
+    const item = element.getElementsByClassName("item");
+    element.append(item[0]);
   }
 
 }

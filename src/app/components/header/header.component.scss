@@ -87,12 +87,16 @@
   color: $white;
 }
 .header_menu_searchbar {
-  display: flex;
-  margin-top: 8px;
-  height: 40px;
-  justify-content: center;
-  flex: 1;
-  font-size: 12px;
+  display: none;
+  @include respond-to(desktop) {
+    display: flex;
+    margin-top: 8px;
+    height: 40px;
+    justify-content: center;
+    flex: 1;
+    font-size: 12px;
+  }
+
 }
 .header_menu_input {
   height: 20px;
@@ -174,6 +178,9 @@
   font-weight: 800;
 }
 .header_bottom {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
   height: 49px;
   background-image: none;
   background-color: $amazonDark;
@@ -184,6 +191,9 @@
   color: $white;
   display: flex;
   align-items: center;
+  @include respond-to(desktop) {
+    overflow-x: unset;
+  }
   .header_menu_icon {
     cursor: pointer;
     display: flex;
