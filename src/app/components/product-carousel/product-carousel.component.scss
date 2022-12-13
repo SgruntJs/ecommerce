@@ -1,7 +1,6 @@
 @import "../../../assets/common/styles.scss";
 :host {
   flex: 1;
-  
 }
 .products-title {
   white-space: nowrap;
@@ -30,7 +29,7 @@
     color: $link;
     cursor: pointer;
     &:hover {
-        text-decoration: underline;
+      text-decoration: underline;
     }
   }
 }
@@ -41,24 +40,25 @@
   overflow: hidden;
   display: flex;
   background-color: $white;
+
+  left: 0;
+  margin: 0 0 14px;
+  padding: 0;
   .product-item {
-    text-align: center;
-    min-width: 145px;
+    width: auto;
+    height: auto;
     max-width: 270px;
     max-height: 200px;
-    overflow: hidden;
-    margin: 0 10px 0 0;
-    position: relative;
+    vertical-align: middle;
   }
 }
 
 .slide {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .control {
@@ -171,38 +171,27 @@
   box-shadow: inset 0 0 0 2px $white, inset 0 0 0 4px $amazonBlue;
 }
 
-.FadeAway {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  background: linear-gradient(
-    top,
-    rgba(255, 255, 255, 255) 50%,
-    rgba(234, 237, 237, 1) 100%
-  );
-  background: -moz-linear-gradient(
-    top,
-    rgba(255, 255, 255, 0) 50%,
-    rgba(234, 237, 237, 1) 100%
-  );
-  background: -ms-linear-gradient(
-    top,
-    rgba(255, 255, 255, 0) 50%,
-    rgba(234, 237, 237, 1) 100%
-  );
-  background: -o-linear-gradient(
-    top,
-    rgba(255, 255, 255, 0) 50%,
-    rgba(234, 237, 237, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    top,
-    rgba(255, 255, 255, 0) 40%,
-    rgba(234, 237, 237, 1) 110%
-  );
-  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#550000FF, endColorstr=#550000FF);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00ffffff, endColorstr=$darkGrey);
+.products-carousel {
+  padding: 20px 0;
+  .products-container {
+    width: 100%;
+  }
+  .slider-wrap {
+    position: relative;
+    .slider-main {
+      position: absolute;
+      width: 200%;
+      .item {
+        display: inline-block;
+        height: 200px;
+        width: 200px;
+        position: relative;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
 }

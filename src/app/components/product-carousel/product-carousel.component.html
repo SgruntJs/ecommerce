@@ -7,7 +7,7 @@
     >Scopri</span
   >
 </div>
-<div class="product-carousel">
+<!-- <div class="product-carousel">
   <ng-container *ngFor="let slide of slides; let i = index">
     <div class="product-item">
       <img
@@ -42,4 +42,15 @@
       ></a
     >
   </div>
+</div> -->
+<div class="products-carousel">
+    <div class="products-container">
+        <div class="slider-wrap">
+            <div class="slider-main" >
+                <div class="item" *ngFor="let slide of slides; let i = index">
+                    <img src="{{slide.url}}" alt="{{slide.title}}">
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
