@@ -31,7 +31,7 @@ export class SideNavContentComponent {
     console.log(id);
     const first = this.firstLevel.nativeElement;
     // const second = this.secondLevel.nativeElement;
-    const el = document.getElementById("second-" + id);
+    const el = document.querySelector("#second-" + id);
     // this.secondLevel.forEach( item => {
     //   this.renderer
     //   this.renderer.addClass(item,'menu-translateX');
@@ -53,7 +53,7 @@ export class SideNavContentComponent {
     // this.renderer.removeClass(second,'menu-translateX');
     // this.renderer.removeClass(second,'menu-visible');
     // this.renderer.addClass(second,'menu-translateX-right');
-    const el = document.getElementById("second-" + id);
+    const el = document.querySelector("#second-" + id);
     el?.classList.remove("menu-translateX");
     el?.classList.remove("menu-visible");
     el?.classList.add("menu-translateX-right");
