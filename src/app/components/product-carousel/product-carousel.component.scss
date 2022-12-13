@@ -178,6 +178,8 @@
   }
   .slider-wrap {
     position: relative;
+    overflow-x: hidden;
+    height: 250px;
     .slider-main {
       position: absolute;
       width: 200%;
@@ -186,6 +188,7 @@
         height: 200px;
         width: 200px;
         position: relative;
+        margin: 0 12px;
         img {
           width: 100%;
           height: 100%;

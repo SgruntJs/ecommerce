@@ -20,6 +20,8 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { SideNavContentComponent } from './components/side-nav-content/side-nav-content.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductCarouselComponent } from './components/product-carousel/product-carousel.component';
+import { PrevDirective } from './directives/prev.directive';
+import { NextDirective } from './directives/next.directive';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { ProductCarouselComponent } from './components/product-carousel/product-
     SideNavComponent,
     SideNavContentComponent,
     FooterComponent,
-    ProductCarouselComponent
+    ProductCarouselComponent,
+    PrevDirective,
+    NextDirective
   ],
   imports: [
     BrowserModule,

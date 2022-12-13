@@ -51,6 +51,23 @@
                     <img src="{{slide.url}}" alt="{{slide.title}}">
                 </div>
             </div>
+            <div class="a-carousel-col a-carousel-left" (click)="onPreviousClick()">
+                <a
+                  class="a-carousel-goto-prevpage"
+                  href="javascript: void(0)"
+                  aria-disabled="true"
+                  ><i class="a-icon a-icon-previous-rounded"
+                    ><span class="a-icon-alt">Previous slide</span></i
+                  ></a
+                >
+              </div>
+              <div class="a-carousel-col a-carousel-right" appNext>
+                <a class="a-carousel-goto-nextpage" href="javascript: void(0)"
+                  ><i class="a-icon a-icon-next-rounded"
+                    ><span class="a-icon-alt">Next slide</span></i
+                  ></a
+                >
+              </div>
         </div>
     </div>
 </div>
