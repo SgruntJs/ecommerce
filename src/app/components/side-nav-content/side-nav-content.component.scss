@@ -54,7 +54,7 @@
         display: flex;
 
         &.menu-back-button {
-          border-bottom: 1px solid #d5dbdb;
+          border-bottom: 1px solid $thinGrey;
           text-transform: uppercase;
           .menu-arrow-prev {
             background-position: -137px -310px;
@@ -94,7 +94,7 @@
       }
     }
     .menu-separator {
-      border-bottom: 1px solid #d5dbdb;
+      border-bottom: 1px solid $thinGrey;
       padding: 0;
       margin: 5px 0;
     }

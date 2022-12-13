@@ -12,6 +12,7 @@ $amazonBlue: #008296;
 $amazonDark: #232f3e;
 $textBlack: #111;
 $link: #007185;
+$thinGrey: #d5dbdb;
 
 $breakpoints: (
   "small": 767px,
@@ -45,7 +46,7 @@ $breakpoints: (
   width: 100%;
 
   @include respond-to(desktop) {
-    max-width: 1480px;
+    max-width: 1500px;
     width: 100%;
     margin: 0 auto;
   }
