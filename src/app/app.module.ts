@@ -18,6 +18,8 @@ import { CardListComponent } from './components/card-list/card-list.component';
 import { CardComponent } from './components/card/card.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { SideNavContentComponent } from './components/side-nav-content/side-nav-content.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ProductCarouselComponent } from './components/product-carousel/product-carousel.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { SideNavContentComponent } from './components/side-nav-content/side-nav-
     CardListComponent,
     CardComponent,
     SideNavComponent,
-    SideNavContentComponent
+    SideNavContentComponent,
+    FooterComponent,
+    ProductCarouselComponent
   ],
   imports: [
     BrowserModule,

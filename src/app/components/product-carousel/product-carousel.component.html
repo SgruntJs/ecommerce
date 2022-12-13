@@ -1,0 +1,45 @@
+<!-- carousel -->
+<div class="products-title">
+  <h2 class="products-title-left">
+    <span class="title">La vetrina dei nuovi capi</span>
+  </h2>
+  <span class="products-title-right"
+    >Scopri</span
+  >
+</div>
+<div class="product-carousel">
+  <ng-container *ngFor="let slide of slides; let i = index">
+    <div class="product-item">
+      <img
+        *ngIf="i === currentSlide"
+        [src]="slide.url"
+        class="slide"
+        [@slideInOut]="{
+          value: '',
+          params: {
+            direction: this.direction,
+            directionLeave: this.directionLeave
+          }
+        }"
+      />
+    </div>
+  </ng-container>
+
+  <div class="a-carousel-col a-carousel-left" (click)="onPreviousClick()">
+    <a
+      class="a-carousel-goto-prevpage"
+      href="javascript: void(0)"
+      aria-disabled="true"
+      ><i class="a-icon a-icon-previous-rounded"
+        ><span class="a-icon-alt">Previous slide</span></i
+      ></a
+    >
+  </div>
+  <div class="a-carousel-col a-carousel-right" (click)="onNextClick()">
+    <a class="a-carousel-goto-nextpage" href="javascript: void(0)"
+      ><i class="a-icon a-icon-next-rounded"
+        ><span class="a-icon-alt">Next slide</span></i
+      ></a
+    >
+  </div>
+</div>
