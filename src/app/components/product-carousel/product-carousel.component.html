@@ -46,8 +46,14 @@
 <div class="products-carousel">
     <div class="products-container">
         <div class="slider-wrap">
-            <div class="slider-main" >
-                <div class="item" *ngFor="let slide of slides; let i = index">
+            <div class="slider-main" [@slideInOut]="{
+              value: '',
+              params: {
+                direction: this.direction,
+                directionLeave: this.directionLeave
+              }
+            }" >
+                <div class="item" *ngFor="let slide of slides; let i = index" >
                     <img src="{{slide.url}}" alt="{{slide.title}}">
                 </div>
             </div>
@@ -61,7 +67,7 @@
                   ></a
                 >
               </div>
-              <div class="a-carousel-col a-carousel-right" appNext>
+              <div class="a-carousel-col a-carousel-right" (click)="onNextClick()">
                 <a class="a-carousel-goto-nextpage" href="javascript: void(0)"
                   ><i class="a-icon a-icon-next-rounded"
                     ><span class="a-icon-alt">Next slide</span></i

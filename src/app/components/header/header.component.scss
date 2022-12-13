@@ -193,6 +193,7 @@
   align-items: center;
   @include respond-to(desktop) {
     overflow-x: unset;
+    width: auto;
   }
   .header_menu_icon {
     cursor: pointer;

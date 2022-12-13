@@ -5,7 +5,10 @@
 .products-title {
   white-space: nowrap;
   overflow: hidden;
-  margin: 10px 0 0;
+  padding-left: 20px;
+  padding-top: 20px;
+  font-size: 21px;
+
   h2 {
     display: block;
     width: auto;
@@ -14,6 +17,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     padding-bottom: 0;
+    margin-bottom: 0;
   }
   .products-title-right {
     display: block;
@@ -53,14 +57,6 @@
   }
 }
 
-.slide {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
 .control {
   border: none;
   background-color: transparent;
@@ -95,22 +91,17 @@
 // add new css
 .a-carousel-left,
 .a-carousel-right {
-  max-height: 250px;
+  position: absolute;
+  top: 55px;
+  background-color: #fff;
+  height: 100px;
+  line-height: 100px;
+  width: 45px;
+  text-align: center;
+  box-shadow: 0 1px 3px #888;
+  user-select: none;
 }
 
-.a-carousel-left,
-.a-carousel-right {
-  width: 40px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  z-index: 1;
-}
-.a-carousel-left,
-.a-carousel-right {
-  width: 80px;
-  position: absolute;
-}
 .a-carousel-goto-prevpage,
 .a-carousel-goto-nextpage {
   position: absolute;
@@ -157,9 +148,10 @@
 }
 
 .a-carousel-right {
-  text-align: right;
   right: 0;
-  padding-right: 3px;
+  border-radius: 3px 0 0 3px;
+  clip: rect(-10px, 45px, 110px, -10px);
+  padding-left: 5px;
 }
 
 .a-icon.a-icon-next-rounded {
@@ -172,14 +164,19 @@
 }
 
 .products-carousel {
-  padding: 20px 0;
+  padding: 0;
   .products-container {
     width: 100%;
   }
   .slider-wrap {
+    height: 220px;
+    width: 100%;
+    min-height: 220px;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
     position: relative;
-    overflow-x: hidden;
-    height: 250px;
+    margin: 0;
     .slider-main {
       position: absolute;
       width: 200%;
