@@ -8,8 +8,8 @@
     </div>
   </div>
 </div>
-<div class="menu-content">
-  <ul class="menu menu-visible" *ngIf="sidenav$ | async as sidenav" #firstLevel>
+<div class="menu-content" *ngIf="sidenav$ | async as sidenav">
+  <ul class="menu menu-visible" #firstLevel>
     <ng-container *ngFor="let item of sidenav">
       <li *ngIf="item.isHighlight">
         <div class="menu-item menu-title">{{ item.text }}</div>
@@ -140,20 +140,24 @@
         </div>
       </li>
   </ul>-->
-  <ul class="menu menu-translateX-right" #secondLevel> 
-    <li>
-      <div class="menu-item menu-back-button" (click)="backFirst()">
-        <i class="nav-sprite menu-arrow-prev"></i>menu principale
-      </div>
-    </li>
-    <li>
-      <div class="menu-item">Catalogo</div>
-    </li>
-    <li>
-      <div class="menu-item">Catalogo</div>
-    </li>
-    <li>
-      <div class="menu-item">Catalogo</div>
-    </li>
-  </ul>
+ <ng-container *ngFor="let item of sidenav">
+  <div *ngIf="item.subMenu.length > 0">
+    <ul class="menu menu-translateX-right" #secondLevel>
+      <li>
+        <div class="menu-item menu-back-button" (click)="backFirst()">
+          <i class="nav-sprite menu-arrow-prev"></i>menu principale
+        </div>
+      </li>
+      <ng-container *ngFor="let subItem of item.subMenu">
+        <li>
+          <div class="menu-item">{{subItem.text}}</div>
+        </li>
+      </ng-container>
+      
+    </ul>
+  </div>
+ </ng-container>
+  
+
+ 
 </div>
