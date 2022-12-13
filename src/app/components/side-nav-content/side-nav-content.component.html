@@ -26,7 +26,7 @@
         class="menu-separator"
       ></li>
       <li *ngIf="item.subMenu.length > 0">
-        <div class="menu-item" (click)="openSecondLevel()">
+        <div class="menu-item" (click)="openSecondLevel(item.id)">
           <div>{{ item.text }}</div>
           <i class="nav-sprite menu-arrow-next"></i>
         </div>
@@ -142,9 +142,9 @@
   </ul>-->
  <ng-container *ngFor="let item of sidenav">
   <div *ngIf="item.subMenu.length > 0">
-    <ul class="menu menu-translateX-right" #secondLevel>
+    <ul class="menu menu-translateX-right" #secondLevel id="second-{{item.id}}">
       <li>
-        <div class="menu-item menu-back-button" (click)="backFirst()">
+        <div class="menu-item menu-back-button" (click)="backFirst(item.id)">
           <i class="nav-sprite menu-arrow-prev"></i>menu principale
         </div>
       </li>
