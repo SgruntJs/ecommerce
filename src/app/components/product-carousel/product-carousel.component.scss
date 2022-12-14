@@ -25,7 +25,6 @@
     float: left;
     text-align: right;
     font-size: 14px;
-    vertical-align: middle;
     padding-left: 15px;
     line-height: 35px;
     overflow: hidden;
@@ -37,17 +36,9 @@
     }
   }
 }
-.product-carousel {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  background-color: $white;
-
-  left: 0;
-  margin: 0 0 14px;
-  padding: 0;
+.products-carousel {
+  margin-left: 20px;
+  margin-right: 20px;
   .product-item {
     width: auto;
     height: auto;
@@ -57,40 +48,11 @@
   }
 }
 
-.control {
-  border: none;
-  background-color: transparent;
-  outline: 0; // remove blue outline border, but make sure they are still focussable for accessibility
-  position: absolute;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0.5em;
-  color: white;
-  font-weight: bold;
-  font-size: 3em;
-  user-select: none;
-  height: 100%;
-  opacity: 80%;
 
-  &:hover,
-  &:focus {
-    opacity: 1;
-  }
-
-  /* Position the buttons */
-  &.next {
-    right: 0;
-  }
-  &.prev {
-    left: 0;
-  }
-}
 
 // add new css
-.a-carousel-left,
-.a-carousel-right {
+.slick-prev,
+.slick-next {
   position: absolute;
   top: 55px;
   background-color: #fff;
@@ -102,8 +64,8 @@
   user-select: none;
 }
 
-.a-carousel-goto-prevpage,
-.a-carousel-goto-nextpage {
+.slick-prev,
+.slick-next{
   position: absolute;
   top: 0;
   left: 0;

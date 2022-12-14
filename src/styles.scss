@@ -1,17 +1,60 @@
-
 @import "./assets/common/fonts.scss";
 
 body {
-    margin: 0px;
-    background-color: #eaeded;
-    font-family: "Amazon Regular"!important;
+  margin: 0px;
+  background-color: #eaeded;
+  font-family: "Amazon Regular" !important;
 }
-
-
 
 .nav-focus {
-    box-shadow: 0 0 0 2px #f90, 0 0 3px rgb(255 153 0 / 50%);
+  box-shadow: 0 0 0 2px #f90, 0 0 3px rgb(255 153 0 / 50%);
 }
 
-html, body { height: 100%; }
+html,
+body {
+  height: 100%;
+}
 
+.slick-prev,
+.slick-next {
+  top: 55px;
+  background-color: #fff !important;
+  height: 100px !important;
+  line-height: 100px !important;
+  width: 45px !important;
+  text-align: center;
+  box-shadow: 0 1px 3px #888;
+  user-select: none !important;
+  &:focus {
+    text-decoration: none;
+    outline: 5px auto #008296!important
+  }
+}
+
+.slick-next {
+  right: 0 !important;
+  border-radius: 3px 0 0 3px;
+  clip: rect(-10px, 45px, 110px, -10px);
+  padding-left: 5px;
+  z-index: 10;
+  &:before {
+    content: "\276F" !important;
+    color: #111 !important;
+  }
+}
+
+.slick-prev {
+  left: 0 !important;
+  border-radius: 0 3px 3px 0;
+  clip: rect(-10px, 55px, 110px, 0);
+  padding-right: 5px;
+  z-index: 10;
+  &:before {
+    content: "\276E"!important;
+    color: #111!important;
+  }
+}
+
+.slick-slide {
+    padding-right: 10px;
+}
