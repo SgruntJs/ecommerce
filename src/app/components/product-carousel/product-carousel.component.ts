@@ -40,6 +40,27 @@ export class ProductCarouselComponent implements OnInit {
     console.log(this.slides);
   }
 
+  
+  slideConfig = { slidesToShow:7, slidesToScroll: 6 };
+  addSlide() {
+    
+  }
+  removeSlide() {
+    this.slides.length = this.slides.length - 1;
+  }
+  slickInit(e: any) {
+    console.log('slick initialized');
+  }
+  breakpoint(e: any) {
+    console.log('breakpoint');
+  }
+  afterChange(e: any) {
+    console.log('afterChange');
+  }
+  beforeChange(e: any) {
+    console.log('beforeChange');
+  }
+
  
 
   preloadImages() {

@@ -23,6 +23,8 @@ import { ProductCarouselComponent } from './components/product-carousel/product-
 import { PrevDirective } from './directives/prev.directive';
 import { NextDirective } from './directives/next.directive';
 
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +49,8 @@ import { NextDirective } from './directives/next.directive';
     MatSelectModule,
     FormsModule,
     MatFormFieldModule,
-    CarouselModule
+    CarouselModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
