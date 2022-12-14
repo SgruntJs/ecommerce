@@ -15,16 +15,18 @@ body {
   height: 100%;
 }
 .products-carousel {
-    .slick-next, .slick-prev {
-        opacity: 0;
-        transition: .7s ease-in-out opacity;
-      }
-    &:hover {
-      .slick-next, .slick-prev {
-        opacity: 1;
-        transition: .7s ease-in-out opacity;
-      }
+  .slick-next,
+  .slick-prev {
+    opacity: 0;
+    transition: 0.7s ease-in-out opacity;
+  }
+  &:hover {
+    .slick-next,
+    .slick-prev {
+      opacity: 1;
+      transition: 0.7s ease-in-out opacity;
     }
+  }
 }
 
 .slick-prev,
@@ -40,15 +42,15 @@ body {
   opacity: 0;
   &:focus {
     text-decoration: none;
-    outline: 5px auto #008296!important
+    outline: 5px auto #008296 !important;
   }
   &:hover {
     &:before {
-        color: #111;
+      color: #111;
     }
   }
   &.slick-disabled {
-    opacity: .5!important;
+    opacity: 0.5 !important;
   }
 }
 
@@ -71,11 +73,25 @@ body {
   padding-right: 5px;
   z-index: 10;
   &:before {
-    content: "\276E"!important;
-    color: #111!important;
+    content: "\276E" !important;
+    color: #111 !important;
   }
 }
 
 .slick-slide {
-    padding-right: 10px;
+  padding-right: 10px;
 }
+
+.slick-track {
+    left: 0!important;
+    transition: all .5s ease-in-out!important;
+  }
+  .bounce-next{
+    left: 50px!important;
+    transition: all .5s ease-in-out!important;
+
+  }
+  .bounce-prev{
+    left: -30px!important;
+    transition: all .5s ease-in-out!important;
+  }
