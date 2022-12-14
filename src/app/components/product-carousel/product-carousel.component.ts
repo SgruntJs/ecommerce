@@ -28,6 +28,7 @@ import {
   ]
 })
 export class ProductCarouselComponent implements OnInit {
+  @Input() title!: string;
   @Input() slides: Slide[] = [];
   direction = '0';
   directionLeave = '0';
@@ -41,7 +42,7 @@ export class ProductCarouselComponent implements OnInit {
   }
 
   
-  slideConfig = { slidesToShow:7, slidesToScroll: 6 };
+  slideConfig = { slidesToShow:7, slidesToScroll: 6, infinite: false};
   addSlide() {
     
   }

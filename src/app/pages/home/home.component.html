@@ -1,12 +1,14 @@
 <div class="main">
-    <div class="carousel_container">
-        <app-carousel [slides]="slides"></app-carousel>
+  <div class="carousel_container">
+    <app-carousel [slides]="slides"></app-carousel>
+  </div>
+  <div class="main_container">
+    <app-card-list></app-card-list>
+    <div class="products-carousel_container">
+      <app-product-carousel
+        [slides]="products"
+        [title]="'La vetrina dei nuovi capi'"
+      ></app-product-carousel>
     </div>
-    <div class="main_container">
-        <app-card-list></app-card-list>
-        <div class="products-carousel_container">
-        <app-product-carousel [slides]="products"></app-product-carousel>
-    </div>
-    </div>    
+  </div>
 </div>
-

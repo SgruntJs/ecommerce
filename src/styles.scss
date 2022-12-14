@@ -25,9 +25,14 @@ body {
   text-align: center;
   box-shadow: 0 1px 3px #888;
   user-select: none !important;
+  opacity: 0;
   &:focus {
     text-decoration: none;
     outline: 5px auto #008296!important
+  }
+  &:hover {
+    opacity: 1;
+    transition: opacity .7s ease-in-out;
   }
 }
 
