@@ -38,7 +38,6 @@ export class ProductCarouselComponent implements OnInit {
 
   ngOnInit() {
     this.preloadImages(); // for the demo
-    console.log(this.slides);
   }
 
   

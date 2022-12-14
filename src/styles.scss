@@ -14,6 +14,18 @@ html,
 body {
   height: 100%;
 }
+.products-carousel {
+    .slick-next, .slick-prev {
+        opacity: 0;
+        transition: .7s ease-in-out opacity;
+      }
+    &:hover {
+      .slick-next, .slick-prev {
+        opacity: 1;
+        transition: .7s ease-in-out opacity;
+      }
+    }
+}
 
 .slick-prev,
 .slick-next {
@@ -31,8 +43,12 @@ body {
     outline: 5px auto #008296!important
   }
   &:hover {
-    opacity: 1;
-    transition: opacity .7s ease-in-out;
+    &:before {
+        color: #111;
+    }
+  }
+  &.slick-disabled {
+    opacity: .5!important;
   }
 }
 
@@ -44,7 +60,7 @@ body {
   z-index: 10;
   &:before {
     content: "\276F" !important;
-    color: #111 !important;
+    color: #232f3e !important;
   }
 }
 
