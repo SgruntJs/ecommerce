@@ -1,0 +1,30 @@
+.address {
+  padding-left: 9px;
+  padding-right: 9px;
+  margin-right: 9px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  &:hover {
+    border: 1px solid #fff;
+  }
+  .address-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .address-left {
+      .address-icon {
+        background-position: -71px -378px;
+        width: 15px;
+        height: 18px;
+        margin-top: 8px;
+        display: flex;
+        position: static;
+        float: none;
+      }
+    }
+    .address-right {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

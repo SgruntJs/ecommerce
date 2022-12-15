@@ -1,16 +1,26 @@
 <div class="header">
   <nav class="header_top">
-    <div class="header_menu">     
-      <div id="nav-logo">
-        <div class="nav-logo-link nav-progressive-attribute">
-          <span class="nav-sprite nav-logo-base"></span>
-          <span class="nav-sprite"></span>
-          <span class="nav-logo-locale">{{lang}}</span>
+    <div class="header_menu">
+      <div class="header_menu_left">
+        <div id="nav-logo">
+          <div class="nav-logo-link nav-progressive-attribute">
+            <span class="nav-sprite nav-logo-base"></span>
+            <span class="nav-sprite"></span>
+            <span class="nav-logo-locale">{{ lang }}</span>
+          </div>
         </div>
+        <app-address></app-address>
       </div>
-      <div class="header_menu_searchbar" >
-        <div class="select" *ngIf="categories$ | async as categories"  [class.nav-focus]='selectFocusClass'>
-          <select (focus)="selectFocusClass = true" (blur)="selectFocusClass = false">
+      <div class="header_menu_searchbar">
+        <div
+          class="select"
+          *ngIf="categories$ | async as categories"
+          [class.nav-focus]="selectFocusClass"
+        >
+          <select
+            (focus)="selectFocusClass = true"
+            (blur)="selectFocusClass = false"
+          >
             <option value="tutte">Tutte le categorie</option>
             <option
               value="{{ category.value }}"
@@ -27,12 +37,14 @@
       </div>
       <div class="header_menu_right">
         <div class="header_menu_signin">
-          <span class="header_menu_top_item">Hello, accedi</span>
-          <span class="header_menu_bottom_item">Account e liste</span>
+          <span class="header_menu_top_item nav-line-top">Ciao, accedi</span>
+          <span class="header_menu_bottom_item nav-line-tobottomp"
+            >Account e liste</span
+          >
         </div>
         <div routerLink="/login" class="header_menu_signin">
-          <span class="header_menu_top_item">Resi</span>
-          <span class="header_menu_bottom_item">e ordini</span>
+          <span class="header_menu_top_item nav-line-top">Resi</span>
+          <span class="header_menu_bottom_item nav-line-bottom">e ordini</span>
         </div>
         <div routerLink="/checkout" class="header_menu_cart header_menu_signin">
           <div class="header-menu_cart_left">
@@ -52,14 +64,13 @@
     </div>
   </nav>
   <nav class="header_bottom">
-    <div class="header_menu_icon"  (click)="toggleSideNav()">
+    <div class="header_menu_icon" (click)="toggleSideNav()">
       <mat-icon>menu</mat-icon>
       <span>Tutte</span>
     </div>
     <div class="header_bottom_nav">
       <ul *ngIf="navigationLinks$ | async as navigationLinks">
-        <li *ngFor="let navItem of navigationLinks">{{navItem.text}}</li>
-     
+        <li *ngFor="let navItem of navigationLinks">{{ navItem.text }}</li>
       </ul>
     </div>
   </nav>

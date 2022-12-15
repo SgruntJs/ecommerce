@@ -24,6 +24,7 @@ import { PrevDirective } from './directives/prev.directive';
 import { NextDirective } from './directives/next.directive';
 
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { AddressComponent } from './components/address/address.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     FooterComponent,
     ProductCarouselComponent,
     PrevDirective,
-    NextDirective
+    NextDirective,
+    AddressComponent
   ],
   imports: [
     BrowserModule,
