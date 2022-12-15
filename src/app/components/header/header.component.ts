@@ -1,7 +1,10 @@
 import { Component } from "@angular/core";
 import { of } from "rxjs";
-import { Category } from "src/app/models/category";
+import { Category } from "src/app/models/category.model";
+import { Navigation } from "src/app/models/navigation.model";
 import { NavigationService } from "src/app/services/navigation/navigation.service";
+import { NAVIGATION } from "./navigation";
+import { Observable } from 'rxjs';
 
 @Component({
   selector: "app-header",
@@ -14,8 +17,14 @@ export class HeaderComponent {
   selectedValue!: string;
   selectedCar!: string;
   selectFocusClass = false;
+  navigationLinks = NAVIGATION;
+  navigationLinks$!: Observable<Navigation[]>;
 
-  constructor(private navService: NavigationService) { }
+  constructor(private navService: NavigationService) {
+    this.navigationLinks$ = of(this.navigationLinks);
+   }
+
+
 
   ngOnInit(): void {
   }
@@ -33,4 +42,5 @@ export class HeaderComponent {
   ];
 
   categories$ = of(this.categories);
+  
 }

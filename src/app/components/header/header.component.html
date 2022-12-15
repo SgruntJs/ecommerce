@@ -57,14 +57,9 @@
       <span>Tutte</span>
     </div>
     <div class="header_bottom_nav">
-      <ul>
-        <li>Offerte di Natale</li>
-        <li>Buoni Reagalo</li>
-        <li>Bestseller</li>
-        <li>Amazon Basics</li>
-        <li>Novità</li>
-        <li>Servizio Clienti</li>
-        <li>Musica</li>
+      <ul *ngIf="navigationLinks$ | async as navigationLinks">
+        <li *ngFor="let navItem of navigationLinks">{{navItem.text}}</li>
+     
       </ul>
     </div>
   </nav>
