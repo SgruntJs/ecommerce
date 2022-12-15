@@ -20,11 +20,11 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { SideNavContentComponent } from './components/side-nav-content/side-nav-content.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductCarouselComponent } from './components/product-carousel/product-carousel.component';
-import { PrevDirective } from './directives/prev.directive';
-import { NextDirective } from './directives/next.directive';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { AddressComponent } from './components/address/address.component';
+import { AddressFormComponent } from './components/address-form/address-form.component';
 
 @NgModule({
   declarations: [
@@ -38,9 +38,8 @@ import { AddressComponent } from './components/address/address.component';
     SideNavContentComponent,
     FooterComponent,
     ProductCarouselComponent,
-    PrevDirective,
-    NextDirective,
-    AddressComponent
+    AddressComponent,
+    AddressFormComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +51,8 @@ import { AddressComponent } from './components/address/address.component';
     FormsModule,
     MatFormFieldModule,
     CarouselModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
