@@ -173,7 +173,7 @@
     appearance: none;
     background-size: 10px;
     background-image: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png");
-    background-position: right 8px  center; /*Positioning*/
+    background-position: right 8px center; /*Positioning*/
     background-repeat: no-repeat; /*Prevent showing multiple background images*/
     box-shadow: 0 2px 5px rgb(15 17 17 / 15%);
     &:focus {
@@ -183,7 +183,7 @@
       background: #edfdff;
       background-size: 10px;
       background-image: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png");
-      background-position: right 8px  center; /*Positioning*/
+      background-position: right 8px center; /*Positioning*/
       background-repeat: no-repeat; /*Prevent showing multiple background images*/
     }
     &:hover {
@@ -197,6 +197,16 @@
       background-color: $white;
       padding-left: 0;
       font-size: 14px;
+      padding: 2px 12px 1px 13px;
+      height: calc(1.2em + 24px);
+      &:hover {
+        border-color: #d5d9d9;
+        background-color: #f0f2f2 !important;
+      }
+      &:checked {
+        background-color: #EDFDFF;
+        border: #d5d9d9 1px solid;
+      }
     }
   }
 }
