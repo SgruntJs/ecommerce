@@ -78,10 +78,14 @@ export class CustomDropdownComponent implements OnInit, AfterViewInit {
     this.dropdown = evt.target.innerHTML;
     this.isDropDownOpen = false;
     this.sendNewData(this.dropdown);
-
+    this.sendObject({text: 'il tuo indirizzo di consegna', value: this.dropdown});
   }
 
   sendNewData(data: string) {
     this.dataService.sendData(data);
+  }
+
+  sendObject(data: any) {
+    this.dataService.sendObjData(data);
   }
 }
