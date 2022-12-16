@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ComponentFactoryResolver, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
+
+
+  ScrollIntoView(elem: string) {
+    console.log(elem);
+   const el = document.querySelector(elem);
+      el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    
+    
+  }
+
+
 
 }
