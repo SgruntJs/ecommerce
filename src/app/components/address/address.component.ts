@@ -9,13 +9,14 @@ import { AddressFormComponent } from "../address-form/address-form.component";
   styleUrls: ["./address.component.scss"],
 })
 export class AddressComponent implements OnInit {
-  isVisibleLocation = false;
+
   location = "";
   locaObj: any;
   constructor(public dialog: MatDialog, private dataService: DataService) {}
 
   openDialog() {
     const dialogRef = this.dialog.open(AddressFormComponent);
+    
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`);
@@ -30,7 +31,7 @@ export class AddressComponent implements OnInit {
     this.dataService.data.subscribe((response) => {
       console.log("res", response);
       this.location = response; // you will receive the data from sender component here.
-      this.isVisibleLocation = true;
+
     });
   }
 
@@ -38,6 +39,7 @@ export class AddressComponent implements OnInit {
     this.dataService.dataObj.subscribe((res) => {
       console.log("res1", res);
       this.locaObj = res;
+      this.dialog.closeAll();
     });
   }
 }
