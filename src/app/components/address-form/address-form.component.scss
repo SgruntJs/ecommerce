@@ -31,7 +31,7 @@
       top: 2px;
       margin-top: 14px;
       span {
-        background-color: $white;;
+        background-color: $white;
         color: #767676;
         display: inline-block;
         font-size: 12px;
@@ -52,7 +52,7 @@
         top: 50%;
         z-index: 1;
         width: 100%;
-    }
+      }
     }
     &-top-text {
       color: #565959;
@@ -84,6 +84,119 @@
           box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
         }
       }
+    }
+    &-center {
+      .address-form-row--flex {
+        display: flex;
+        flex-direction: row;
+        gap: 2%;
+        .address-form-input {
+          background-color: $white;
+          height: 29px;
+          padding: 0px 7px;
+          line-height: normal;
+          border: 1px solid #888c8c;
+          border-radius: 3px;
+          box-shadow: 0 1px 2px rgb(15 17 17 / 15%) inset;
+          outline: 0;
+          flex-basis: 66.66%;
+          color: $black;
+        }
+        .btn {
+          flex-basis: 33.33%;
+          border-radius: 8px;
+          box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+          &-white {
+            background: $white;
+            border-color: #d5d9d9;
+            border-style: solid;
+            border-width: 1px;
+            cursor: pointer;
+            display: inline-block;
+            padding: 0;
+            text-align: center;
+            text-decoration: none !important;
+            vertical-align: middle;
+            &:hover {
+              background-color: #f7fafa;
+              border-color: #d5d9d9;
+            }
+          }
+        }
+      }
+    }
+    &-bottom {
+      .address-form-row {
+        .dropdown-container {
+          position: relative;
+          select {
+            position: absolute;
+            z-index: -1;
+            opacity: 0.01;
+            max-width: 100%;
+            left: 0;
+            transition: all 0.1s linear;
+            line-height: 19px;
+            color: $black;
+            &.a-prompt {
+            }
+            option {
+              background-color: $white;
+              padding-left: 0;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//amazon dropdown
+
+.a-dropdown-container {
+  position: relative;
+  select {
+    transition: all 0.1s linear;
+    line-height: 19px;
+    color: #0f1111;
+    margin: 0;
+    font-size: 100%;
+    vertical-align: middle;
+    border-color: #d5d9d9;
+    border-radius: 8px;
+    color: #0f1111;
+    background: #f0f2f2;
+    width: 100%;
+    padding: 5px 7px;
+    font-size: 13px;
+    appearance: none;
+    background-size: 10px;
+    background-image: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png");
+    background-position: right 8px  center; /*Positioning*/
+    background-repeat: no-repeat; /*Prevent showing multiple background images*/
+    box-shadow: 0 2px 5px rgb(15 17 17 / 15%);
+    &:focus {
+      outline: 0;
+      border-color: #007185;
+      box-shadow: 0 0 0 3px #c8f3fa;
+      background: #edfdff;
+      background-size: 10px;
+      background-image: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png");
+      background-position: right 8px  center; /*Positioning*/
+      background-repeat: no-repeat; /*Prevent showing multiple background images*/
+    }
+    &:hover {
+      background: #e3e6e6;
+      background-size: 10px;
+      background-image: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png");
+      background-position: right 8px center; /*Positioning*/
+      background-repeat: no-repeat; /*Prevent showing multiple background images*/
+    }
+    option {
+      background-color: $white;
+      padding-left: 0;
+      font-size: 14px;
     }
   }
 }

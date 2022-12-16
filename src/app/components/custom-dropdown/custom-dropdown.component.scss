@@ -1,0 +1,48 @@
+
+  
+  ul {
+    width: 100%;
+    list-style: none;
+    overflow: auto;
+  }
+  
+  li {
+    color: black;
+  }
+  
+  .caret {
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border: 5px solid transparent;
+    cursor: pointer;
+  }
+  .caret.down {
+    border-top-color: black;
+  }
+  
+  
+  .custom-dropdown-input {
+      display: flex;
+      width: 100%;
+  
+      border-radius: 7px;
+      background: #F0F2F2;
+      box-shadow: 0 2px 5px rgb(15 17 17 / 15%);
+      cursor: pointer;
+  
+      input {
+          border: none;
+          background: #F0F2F2;
+          width: 100%;
+          padding-right: 26px;
+          text-align: left;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          position: relative;
+          z-index: 10;
+          &:focus {
+              outline: 0;
+          }
+      }
+  }

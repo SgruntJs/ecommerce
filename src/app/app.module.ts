@@ -25,6 +25,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { AddressComponent } from './components/address/address.component';
 import { AddressFormComponent } from './components/address-form/address-form.component';
+import { CustomDropdownComponent } from './components/custom-dropdown/custom-dropdown.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { AddressFormComponent } from './components/address-form/address-form.com
     FooterComponent,
     ProductCarouselComponent,
     AddressComponent,
-    AddressFormComponent
+    AddressFormComponent,
+    CustomDropdownComponent
   ],
   imports: [
     BrowserModule,
