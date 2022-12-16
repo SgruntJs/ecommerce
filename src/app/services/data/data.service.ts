@@ -6,9 +6,9 @@ import { BehaviorSubject, Observable, Subject } from 'rxjs';
 })
 export class DataService {
 
-  private dataSource: BehaviorSubject<string> = new BehaviorSubject<string>('Initial Value');
+  private dataSource: BehaviorSubject<string> = new BehaviorSubject<string>('Scegli lil tuo indirizzo');
   data: Observable<string> = this.dataSource.asObservable();
-  public isUpdated: Subject<boolean> = new Subject<boolean>();
+
  
   constructor() { }
  
@@ -16,12 +16,4 @@ export class DataService {
     this.dataSource.next(data);
   }
 
-
-  onSendTrueUpdate(value: boolean) {
-    this.isUpdated.next(value);
-  }
-
-  onReceiveTrueEdited() {
-    return this.isUpdated.asObservable();
-  }
 }

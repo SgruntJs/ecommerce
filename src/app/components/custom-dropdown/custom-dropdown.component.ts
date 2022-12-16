@@ -78,7 +78,7 @@ export class CustomDropdownComponent implements OnInit, AfterViewInit {
     this.dropdown = evt.target.innerHTML;
     this.isDropDownOpen = false;
     this.sendNewData(this.dropdown);
-    this.dataService.onSendTrueUpdate(true);
+
   }
 
   sendNewData(data: string) {

@@ -12,11 +12,6 @@ export class AddressComponent implements OnInit{
   isVisibleLocation = false;
   location = '';
   constructor(public dialog: MatDialog, private dataService: DataService) {
-     
-    this.dataService.onReceiveTrueEdited().subscribe(res => {
-      this.getData();
-    });
- 
   }
 
   openDialog() {
@@ -28,10 +23,7 @@ export class AddressComponent implements OnInit{
  
   }
   ngOnInit() {
-   
-    this.dataService.onReceiveTrueEdited().subscribe(res => {
-      this.getData();
-    });
+
     this.getData();
   }
 
