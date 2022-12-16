@@ -128,3 +128,24 @@ body {
 .mdc-dialog__surface {
   border-radius: var(--mdc-dialog-container-shape, var(--mdc-shape-medium, 10px))!important;
 }
+
+
+
+// overrides.scss or styles.scss
+// This fixes https://github.com//issues/4609
+.mat-dialog-override {
+  height: 0px;
+  mat-dialog-container {
+    > :first-child {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      overflow: visible;
+    }
+    mat-dialog-content,
+    div[mat-dialog-content] {
+      flex-grow: 1;
+      max-height: unset;
+    }
+  }
+}

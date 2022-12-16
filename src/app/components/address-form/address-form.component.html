@@ -33,11 +33,13 @@
     <div class="address-form-body-bottom">
       <form>
         <div class="address-form-row">
-          <div class="dropdown-container"></div>
+          <div class="dropdown-container">
+            <custom-dropdown [options]="optionsList1"></custom-dropdown>
+          </div>
         </div>
       </form>
     </div>
-    <div class="a-declarative">
+   <!-- <div class="a-declarative">
       <span class="a-dropdown-container">
         <select class="a-declarative" tabindex="0">
           <option class="a-prompt">Spedisci all’estero</option>
@@ -304,6 +306,6 @@
           </optgroup>
         </select>
       </span>
-    </div>
+    </div>-->
   </div>
 </div>

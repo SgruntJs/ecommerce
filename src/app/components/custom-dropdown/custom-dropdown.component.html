@@ -1,28 +1,32 @@
 <form #testForm="ngForm">
-    <div class="custom-dropdown">
-      <div class="custom-dropdown-input">
-        <input
-          name="dropdown"
-          class="form-control"
-          type="text"
-          [(ngModel)]="dropdown"
-          readonly
-        />
-        <div (click)="toggleDropdown()" class="custom-dropdown-icon">
-          <div class="input-group-text">
-            <span class="caret down"></span>
-          </div>
-        </div>
-      </div>
+  <div class="custom-dropdown">
+    <div class="custom-dropdown-input"  (click)="toggleDropdown()">
+      <input
+        name="dropdown"
+        class="form-control"
+        type="text"
+        [(ngModel)]="dropdown"
+        readonly
+      />
+      <span class="nav-sprite caret down"></span>
+     
     </div>
-  
-    <ul appList (updateControl)="updateControl($event)" class="list-group" *ngIf="isDropDownOpen">
-      <li #options id="option{{index}}"
-        *ngFor="let item of options; let index = index"
-        class="item list-group-item"
-      >
-        {{ item.value }}
-      </li>
-    </ul>
-  
-  </form>
+  </div>
+
+  <ul
+    (updateControl)="updateControl($event)"
+    class="list-group"
+    *ngIf="isDropDownOpen"
+    #list
+    [ngStyle]="{'bottom': setHeight}"
+  >
+    <li
+      [ngClass]="item.isActive ? 'activeOption' : ''"
+      (click)="selectOption($event, index)"
+      *ngFor="let item of options; let index = index"
+      class="item list-group-item"
+    >
+      {{ item.value }}
+    </li>
+  </ul>
+</form>
