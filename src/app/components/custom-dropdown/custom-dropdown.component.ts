@@ -8,6 +8,7 @@ import {
   ViewChild,
 } from "@angular/core";
 import { NgForm } from "@angular/forms";
+import { DataService } from "src/app/services/data/data.service";
 
 export interface Options {
   value: string;
@@ -33,7 +34,7 @@ export class CustomDropdownComponent implements OnInit, AfterViewInit {
   h= 0;
   setHeight = '';
 
-  constructor(private changeDetectorRef: ChangeDetectorRef) {}
+  constructor(private changeDetectorRef: ChangeDetectorRef, private dataService: DataService) {}
 
   show() {
     this.display = true;
@@ -72,9 +73,15 @@ export class CustomDropdownComponent implements OnInit, AfterViewInit {
   selectOption(evt: any, optionIndex: number) {
     this.options.forEach((opt: any, index: number) => {
       opt.isActive = optionIndex === index;
+      
     });
     this.dropdown = evt.target.innerHTML;
     this.isDropDownOpen = false;
-    
+    this.sendNewData(this.dropdown);
+    this.dataService.onSendTrueUpdate(true);
+  }
+
+  sendNewData(data: string) {
+    this.dataService.sendData(data);
   }
 }

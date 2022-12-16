@@ -5,7 +5,9 @@
         </div>
         <div class="address-right">
             <div class="address-right-top nav-line-top">Ciao</div>
-            <div class="address-right-bottom nav-line-bottom">Scegli il tuo indirizzo</div>
+            <div class="address-right-bottom nav-line-bottom" *ngIf="isVisibleLocation; else location ">Scegli il tuo indirizzo</div>
+            <ng-template  #location>
+                <div class="address-right-bottom nav-line-bottom">{{location}}</div></ng-template>
         </div>
     </div>
 </div>
