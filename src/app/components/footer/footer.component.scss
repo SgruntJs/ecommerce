@@ -1,0 +1,33 @@
+@import "../../../assets/common/styles.scss";
+@import "../../../assets/common/styles.scss";
+.footer {
+  &-backtop {
+    background-color: $footerBlue;
+    color: $white;
+    cursor: pointer;
+    &:hover {
+        background-color: #485769;
+    }
+    span {
+      display: block;
+      text-align: center;
+      padding: 15px 0;
+      line-height: 19px;
+      font-size: 13px;
+    }
+  }
+  &-navAccessibility {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    background-color: #232F3E;
+    position: relative;
+    
+    &-row {
+        display: flex;
+        gap: 5%;
+        max-width: 1000px;
+        margin: 0 auto;
+        color: $white;
+    }
+  }
+}
