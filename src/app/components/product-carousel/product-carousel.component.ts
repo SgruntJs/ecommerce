@@ -8,7 +8,7 @@ import {
   ElementRef,
   Renderer2,
 } from "@angular/core";
-import { fromEvent, Subscription } from "rxjs";
+import { fromEvent, skip, Subscription, take } from "rxjs";
 import { Slide } from "src/app/models/slide";
 @Component({
   selector: "app-product-carousel",
@@ -62,10 +62,12 @@ export class ProductCarouselComponent implements OnInit, AfterViewInit {
     const btnNext =
       this.button.nativeElement.parentNode.parentElement.nextElementSibling;
 
-    this.buttonSubscription = fromEvent(btnPrev, "click").subscribe(
+    this.buttonSubscription = fromEvent(btnPrev, "click").pipe(
+      skip(1)
+    )
+    .subscribe(
       (res: any) => {
         if (res.target.classList.contains("slick-disabled")) {
-          console.log("bomba");
           this.renderer.addClass(lastSlide, "bounce-prev");
           setTimeout(() => {
             lastSlide.classList.remove("bounce-prev");
@@ -73,15 +75,18 @@ export class ProductCarouselComponent implements OnInit, AfterViewInit {
         }
       }
     );
+    
   }
   buttonClickNext() {
     const lastSlide = this.button.nativeElement.parentElement;
     const btnNext =
       this.button.nativeElement.parentNode.parentElement.nextElementSibling;
-    this.buttonSubscription2 = fromEvent(btnNext, "click").subscribe(
+    this.buttonSubscription2 = fromEvent(btnNext, "click").pipe(
+      skip(1)
+    )
+    .subscribe(
       (res: any) => {
         if (res.target.classList.contains("slick-disabled")) {
-          console.log("bomba");
           this.renderer.addClass(lastSlide, "bounce-next");
           setTimeout(() => {
             lastSlide.classList.remove("bounce-next");
