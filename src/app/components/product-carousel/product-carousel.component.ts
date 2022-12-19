@@ -34,7 +34,20 @@ export class ProductCarouselComponent implements OnInit, AfterViewInit {
     this.buttonClickNext();
   }
 
-  slideConfig = { slidesToShow: 7, slidesToScroll: 6, infinite: false };
+  slideConfig = {
+    slidesToShow: 7,
+    slidesToScroll: 6,
+    infinite: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   slickInit(e: any) {
     console.log("slick initialized");
@@ -62,37 +75,30 @@ export class ProductCarouselComponent implements OnInit, AfterViewInit {
     const btnNext =
       this.button.nativeElement.parentNode.parentElement.nextElementSibling;
 
-    this.buttonSubscription = fromEvent(btnPrev, "click").pipe(
-      skip(1)
-    )
-    .subscribe(
-      (res: any) => {
+    this.buttonSubscription = fromEvent(btnPrev, "click")
+      .pipe(skip(1))
+      .subscribe((res: any) => {
         if (res.target.classList.contains("slick-disabled")) {
           this.renderer.addClass(lastSlide, "bounce-prev");
           setTimeout(() => {
             lastSlide.classList.remove("bounce-prev");
           }, 500);
         }
-      }
-    );
-    
+      });
   }
   buttonClickNext() {
     const lastSlide = this.button.nativeElement.parentElement;
     const btnNext =
       this.button.nativeElement.parentNode.parentElement.nextElementSibling;
-    this.buttonSubscription2 = fromEvent(btnNext, "click").pipe(
-      skip(1)
-    )
-    .subscribe(
-      (res: any) => {
+    this.buttonSubscription2 = fromEvent(btnNext, "click")
+      .pipe(skip(1))
+      .subscribe((res: any) => {
         if (res.target.classList.contains("slick-disabled")) {
           this.renderer.addClass(lastSlide, "bounce-next");
           setTimeout(() => {
             lastSlide.classList.remove("bounce-next");
           }, 500);
         }
-      }
-    );
+      });
   }
 }

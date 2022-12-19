@@ -4,9 +4,12 @@
     height: 600px;
 }
 .products-carousel_container {
-    height: 285px;
+    height: 225px;
     background-color: $white;
     margin: 0px 20px;
+    @include respond-to(desktop) {
+        height: 285px;
+    }
 }
 .main_container {
     position: relative;
