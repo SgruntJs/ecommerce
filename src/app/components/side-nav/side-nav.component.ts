@@ -21,6 +21,7 @@ export class SideNavComponent implements OnInit {
 
   ngOnInit(): void {
     this.showSideNav = this.navService.getShowNav();
+    console.log('navWidth', this.navWidth)
   }
 
   onSidebarClose() {

@@ -1,9 +1,14 @@
+@import "../../../assets/common/styles.scss";
 .address {
+  display: none;
   padding-left: 9px;
   padding-right: 9px;
   margin-right: 9px;
   cursor: pointer;
   border: 1px solid transparent;
+  @include respond-to('desktop') {
+    display: block;
+  }
   &:hover {
     border: 1px solid #fff;
   }

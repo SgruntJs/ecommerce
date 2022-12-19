@@ -10,7 +10,10 @@
   font-size: 14px;
   display: flex;
   color: $white;
-  padding-right: 8px;
+  padding-right: 0px;
+  @include respond-to(desktop) {
+    padding-right: 8px;
+  }
 
   .nav-cart-icon {
     display: flex;
@@ -132,6 +135,12 @@
   align-items: flex-end;
   height: 40px;
   margin: 8px;
+  justify-content: flex-end;
+  width: 100%;
+  @include respond-to(desktop) {
+    display: flex;
+    width: auto;
+  }
 }
 .header_menu_signin {
   display: flex;
@@ -142,6 +151,12 @@
   padding-right: 9px;
   &:hover {
     border: 1px solid $white;
+  }
+  &.show-desktop {
+    display: none;
+    @include respond-to(desktop) {
+      display: flex;
+    }
   }
 }
 
@@ -180,12 +195,12 @@
   font-weight: 800;
 }
 .header_bottom {
-  width: 100%;
+  // width: 100%;
   overflow-x: auto;
   white-space: nowrap;
   height: 49px;
   background-image: none;
-  background-color: $amazonDark;
+  background-color: $black;
   /* padding-top: 5px;
     padding-bottom: 5px; */
   padding-left: 8px;
@@ -196,6 +211,7 @@
   @include respond-to(desktop) {
     overflow-x: unset;
     width: auto;
+    background-color: $amazonDark;
   }
   .header_menu_icon {
     cursor: pointer;
@@ -238,8 +254,12 @@
   flex-direction: column;
 }
 .header_cart_text {
+  display: none;
   font-size: 13px;
   font-weight: 800;
+  @include respond-to(desktop) {
+    display: block;
+  }
 }
 
 ::ng-deep .mat-mdc-form-field {

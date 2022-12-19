@@ -1,5 +1,6 @@
 @import "../../../assets/common/styles.scss";
 .footer {
+ margin-top: -280px;
   &-backtop {
     background-color: $footerBlue;
     color: $white;
@@ -22,13 +23,22 @@
     background-color: $amazonDark;
     position: relative;
     border-bottom: 1px solid #3a4553;
+    padding: 0 20px;
+    @include respond-to(desktop) {
+        padding: 0;
+    }
     &-row {
       display: flex;
+      flex-direction: column;
       gap: 5%;
-      max-width: 1000px;
+      max-width: 100%;
       margin: 0 auto;
       color: $white;
       padding: 40px 0;
+      @include respond-to(desktop) {
+        max-width: 1000px;
+        flex-direction: row;
+      }
 
       .navFooterColHead {
         font-weight: 700;
@@ -71,12 +81,16 @@
     padding-bottom: 30px;
     ul {
       text-align: center;
-      max-width: 1000px;
+      max-width: 100%;
       margin: 0 auto;
       list-style: none;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      padding-left: 0;
+      @include respond-to(desktop) {
+        max-width: 1000px;
+      }
 
       li {
         padding: 0 0.6em;
@@ -85,7 +99,10 @@
         font-size: 12px;
         cursor: pointer;
         &:first-child {
-          margin-left: 18px;
+          margin-left: 0px;
+          @include respond-to(desktop) {
+            margin-left: 18px;
+          }
         }
         &:hover {
           text-decoration: underline;
@@ -95,17 +112,23 @@
   }
   .footer-descline {
     background-color: #131a22;
-    padding: 30px 0;
+    
     color: #ddd;
+    padding: 30px 20px;
+    @include respond-to(desktop) {
+      padding: 30px 0;
+    }
     &-wrapper {
       display: flex;
       flex-wrap: wrap;
-      max-width: 1000px;
       margin: 0 auto;
       gap: 5%;
+      @include respond-to(desktop) {
+        max-width: 1000px;
+      }
       .footer-descline-item {
         flex: 1 0 20%; /* explanation below */
-        display: flex; 
+        display: flex;
         flex-direction: column;
         font-size: 11px;
         padding-bottom: 10px;
@@ -136,8 +159,12 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin-bottom: 3px;
+      margin-bottom: 10px;
       list-style: none;
+      padding-left: 0;
+      @include respond-to(desktop) {
+        margin-bottom: 3px;
+      }
       li {
         padding: 0 0.6em;
         cursor: pointer;
