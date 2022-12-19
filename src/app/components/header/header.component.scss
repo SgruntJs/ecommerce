@@ -1,11 +1,25 @@
 @import "../../../assets/common/styles.scss";
 .header {
-  //position: sticky;
   z-index: 100;
   top: 0;
   .header_bottom_mobile {
-    display: block;
     background-color: $amazonDark;
+    color: $white;
+    display: flex;
+    padding: 10px 20px;
+    font-size: 13px;
+    &_address {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 3px;
+      .nav-progressive-attribute {
+        background-position: -71px -378px;
+        width: 15px;
+        height: 18px;       
+      }
+    }
+
     @include respond-to(desktop) {
       display: none;
     }
@@ -84,7 +98,6 @@
       padding: 0px 8px 0px 4px;
       margin: 2px 1px 1px 1px;
       .nav-logo-base {
-   
         margin-top: 10px;
         pointer-events: none;
         float: left;

@@ -75,6 +75,9 @@
     </div>
   </nav>
   <nav class="header_bottom_mobile">
-    <button mat-raised-button (click)="openBottomSheet()">Seleziona il tuo codice postale</button>
+    <div (click)="openBottomSheet()" class="header_bottom_mobile_address">
+      <div class="nav-sprite nav-progressive-attribute"></div>
+      <div>Seleziona il tuo codice postale</div>
+    </div>
   </nav>
 </div>
