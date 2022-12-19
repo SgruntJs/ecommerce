@@ -5,6 +5,8 @@ import { Navigation } from "src/app/models/navigation.model";
 import { NavigationService } from "src/app/services/navigation/navigation.service";
 import { NAVIGATION } from "./navigation";
 import { Observable } from 'rxjs';
+import { AddressFormComponent } from "../address-form/address-form.component";
+import { MatBottomSheet } from "@angular/material/bottom-sheet";
 
 @Component({
   selector: "app-header",
@@ -20,11 +22,14 @@ export class HeaderComponent {
   navigationLinks = NAVIGATION;
   navigationLinks$!: Observable<Navigation[]>;
 
-  constructor(private navService: NavigationService) {
+  constructor(private navService: NavigationService,private bottomSheet: MatBottomSheet) {
     this.navigationLinks$ = of(this.navigationLinks);
    }
 
 
+   openBottomSheet(): void {
+    this.bottomSheet.open(AddressFormComponent);
+  }
 
   ngOnInit(): void {
   }

@@ -21,6 +21,7 @@ import { SideNavContentComponent } from './components/side-nav-content/side-nav-
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductCarouselComponent } from './components/product-carousel/product-carousel.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { AddressComponent } from './components/address/address.component';
@@ -54,7 +55,8 @@ import { CustomDropdownComponent } from './components/custom-dropdown/custom-dro
     MatFormFieldModule,
     CarouselModule,
     SlickCarouselModule,
-    MatDialogModule
+    MatDialogModule,
+    MatBottomSheetModule
   ],
   providers: [],
   bootstrap: [AppComponent]
