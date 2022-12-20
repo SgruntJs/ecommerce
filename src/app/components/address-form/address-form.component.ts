@@ -33,7 +33,7 @@ export class AddressFormComponent {
     { value: 'Grecia' },
     { value: 'Grecia' },
     { value: 'Grecia' },
-    { value: 'Grecia' },
+    { value: 'Egitto' },
     { value: 'Grecia' },
     { value: 'Cina' },
     { value: 'Germania' },
@@ -51,6 +51,8 @@ export class AddressFormComponent {
     { value: 'Grecia' },
     { value: 'Grecia' },
     { value: 'Grecia' },
+    { value: 'Romania' },
+    { value: 'Bulgaria' },
   ];
 
 }

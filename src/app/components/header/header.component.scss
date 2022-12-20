@@ -228,6 +228,7 @@
   color: $white;
   display: flex;
   align-items: center;
+  overflow-y: hidden;
   @include respond-to(desktop) {
     overflow-x: unset;
     width: auto;
