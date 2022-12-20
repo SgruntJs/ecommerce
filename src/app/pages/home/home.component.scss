@@ -4,7 +4,7 @@
     height: 600px;
 }
 .products-carousel_container {
-    height: 225px;
+    height: auto;
     background-color: $white;
     margin: 0px 20px;
     @include respond-to(desktop) {
