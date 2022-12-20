@@ -1,4 +1,4 @@
-<div class="address-form" mat-dialog-container>
+<div class="address-form" mat-dialog-container *ngIf="!isVisible">
   <div class="address-form-title">
     <h4>Seleziona la tua posizione</h4>
   </div>
@@ -33,11 +33,15 @@
     <div class="address-form-body-bottom">
       <form>
         <div class="address-form-row">
-          <div class="dropdown-container">
+          <div class="dropdown-container dropdown-container--desktop">
             <custom-dropdown [options]="optionsList1"></custom-dropdown>
+          </div>
+          <div class="dropdown-container dropdown-container--mobile">
+            <span class="dropdown-text-mobile" (click)="showForeignSelection()">Spedisci all'estero</span>
           </div>
         </div>
       </form>
     </div>
   </div>
 </div>
+<app-options *ngIf="isVisible"></app-options>

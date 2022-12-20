@@ -136,6 +136,21 @@
       .address-form-row {
         .dropdown-container {
           position: relative;
+          &--desktop {
+            display: none;
+            @include respond-to(desktop) {
+              display: block;
+            }
+          }
+          &--mobile {
+            display: block;
+            span {
+              color: $amazonBlue;
+            }
+            @include respond-to(desktop) {
+              display: none;
+            }
+          }
           select {
             position: absolute;
             z-index: -1;

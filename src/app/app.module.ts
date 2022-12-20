@@ -27,6 +27,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { AddressComponent } from './components/address/address.component';
 import { AddressFormComponent } from './components/address-form/address-form.component';
 import { CustomDropdownComponent } from './components/custom-dropdown/custom-dropdown.component';
+import { OptionsComponent } from './components/options/options.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { CustomDropdownComponent } from './components/custom-dropdown/custom-dro
     ProductCarouselComponent,
     AddressComponent,
     AddressFormComponent,
-    CustomDropdownComponent
+    CustomDropdownComponent,
+    OptionsComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,8 @@ export interface Options {
 })
 export class AddressFormComponent {
 
+  isVisible = false;
+
   optionsList1: Options[] = [
     {
       value:
@@ -54,5 +56,9 @@ export class AddressFormComponent {
     { value: 'Romania' },
     { value: 'Bulgaria' },
   ];
+
+  showForeignSelection() {
+    this.isVisible = !this.isVisible;
+  }
 
 }
