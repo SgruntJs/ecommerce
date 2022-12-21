@@ -1,67 +1,22 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+import { OPTIONS } from "./options";
 export interface Options {
   value: string;
   isActive?: boolean;
-  }
+  selected?: boolean;
+  common?: boolean;
+}
 @Component({
-  selector: 'app-address-form',
-  templateUrl: './address-form.component.html',
-  styleUrls: ['./address-form.component.scss']
+  selector: "app-address-form",
+  templateUrl: "./address-form.component.html",
+  styleUrls: ["./address-form.component.scss"],
 })
 export class AddressFormComponent {
-
   isVisible = false;
 
- 
+  constructor() {}
 
-  constructor() {
-   
-  }
-
-  optionsList1: Options[] = [
-    {
-      value:
-        "Francia",
-    },
-    {
-      value:
-        "Svizzera",
-    },
-    { value: 'Cina' },
-    { value: 'Germania' },
-    { value: 'Regno Unito' },
-    { value: 'Stati Uniti' },
-    { value: 'Afghanistan' },
-    { value: 'Albania' },
-    { value: 'Algeria' },
-    { value: 'Croazia' },
-    { value: 'Grecia' },
-    { value: 'Grecia' },
-    { value: 'Grecia' },
-    { value: 'Grecia' },
-    { value: 'Grecia' },
-    { value: 'Grecia' },
-    { value: 'Egitto' },
-    { value: 'Grecia' },
-    { value: 'Cina' },
-    { value: 'Germania' },
-    { value: 'Regno Unito' },
-    { value: 'Stati Uniti' },
-    { value: 'Afghanistan' },
-    { value: 'Albania' },
-    { value: 'Algeria' },
-    { value: 'Croazia' },
-    { value: 'Grecia' },
-    { value: 'Grecia' },
-    { value: 'Grecia' },
-    { value: 'Grecia' },
-    { value: 'Grecia' },
-    { value: 'Grecia' },
-    { value: 'Grecia' },
-    { value: 'Grecia' },
-    { value: 'Romania' },
-    { value: 'Bulgaria' },
-  ];
+  optionsList1: Options[] = OPTIONS;
 
   showForeignSelection() {
     this.isVisible = !this.isVisible;
@@ -70,5 +25,4 @@ export class AddressFormComponent {
   show(back: boolean) {
     this.isVisible = back;
   }
-
 }

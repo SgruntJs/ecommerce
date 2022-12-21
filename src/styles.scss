@@ -154,3 +154,33 @@ body {
 .mat-bottom-sheet-container {
   padding: 8px 0!important;
 }
+
+.options-item{
+  .mat-mdc-radio-button {
+    width: 100%;
+    .mdc-form-field {
+      flex-direction: row-reverse!important;
+      width: 100%!important;
+      .mdc-radio {
+        right: 20px;
+      }
+    }
+  }
+  .mat-mdc-radio-button.mat-accent {
+    --mdc-radio-selected-focus-icon-color: #008296!important;
+    --mdc-radio-selected-hover-icon-color: #008296!important;
+    --mdc-radio-selected-icon-color: #008296!important;
+    --mdc-radio-selected-pressed-icon-color: #008296!important;
+    --mat-mdc-radio-checked-ripple-color: transparent!important;
+}
+
+.mat-radio-inner-circle{
+  height: 20px!important;
+  width: 20px!important;
+}
+
+}
+
+.mat-bottom-sheet-container {
+  font-family: "Amazon Regular" !important;
+}

@@ -5,20 +5,33 @@
   <div class="options-body">
     <h3>Paesi più comuni</h3>
     <div class="options-body-commons">
-      <form>
+      
         <div class="options-item">
-          <input type="radio" name="delivery" />
-          <label for="other">Francia</label>
+            <mat-radio-group
+            aria-labelledby="example-radio-group-label"
+            class="example-radio-group"
+             *ngIf="commons$ | async as commonOptions">
+            <mat-radio-button class="example-radio-button" *ngFor="let option of commonOptions" [value]="option.value" name="season" [checked]="option.selected">
+              {{option.value}}
+            </mat-radio-button>
+          </mat-radio-group>
         </div>
+   
+    </div>
+    <h3>Tutti i paesi e Regioni</h3>
+    <div class="options-body-commons">
+      
         <div class="options-item">
-          <input type="radio" name="delivery" />
-          <label for="test1">Cina</label>
+            <mat-radio-group
+            aria-labelledby="example-radio-group-label"
+            class="example-radio-group"
+             *ngIf="rest$ | async as restOptions">
+            <mat-radio-button class="example-radio-button" *ngFor="let option of restOptions" [value]="option.value" name="season" [checked]="option.selected">
+              {{option.value}}
+            </mat-radio-button>
+          </mat-radio-group>
         </div>
-        <div class="options-item">
-          <input type="radio" name="delivery" />
-          <label for="test1">Francia</label>
-        </div>
-      </form>
+   
     </div>
   </div>
 </div>

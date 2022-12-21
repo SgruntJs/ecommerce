@@ -22,6 +22,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProductCarouselComponent } from './components/product-carousel/product-carousel.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import {MatRadioModule} from '@angular/material/radio';
 
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { AddressComponent } from './components/address/address.component';
@@ -58,7 +59,8 @@ import { OptionsComponent } from './components/options/options.component';
     CarouselModule,
     SlickCarouselModule,
     MatDialogModule,
-    MatBottomSheetModule
+    MatBottomSheetModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

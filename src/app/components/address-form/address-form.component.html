@@ -37,11 +37,11 @@
             <custom-dropdown [options]="optionsList1"></custom-dropdown>
           </div>
           <div class="dropdown-container dropdown-container--mobile">
-            <span class="dropdown-text-mobile" (click)="showForeignSelection()">Spedisci all'estero</span>
+            <span class="dropdown-text-mobile" (click)="showForeignSelection()"><mat-icon>language</mat-icon> Spedisci all'estero</span>
           </div>
         </div>
       </form>
     </div>
   </div>
 </div>
-<app-options *ngIf="isVisible" (backEvent)="show($event)"></app-options>
+<app-options *ngIf="isVisible" (backEvent)="show($event)" [optionsList]="optionsList1"></app-options>
