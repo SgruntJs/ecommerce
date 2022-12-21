@@ -12,6 +12,12 @@ export class AddressFormComponent {
 
   isVisible = false;
 
+ 
+
+  constructor() {
+   
+  }
+
   optionsList1: Options[] = [
     {
       value:
@@ -59,6 +65,10 @@ export class AddressFormComponent {
 
   showForeignSelection() {
     this.isVisible = !this.isVisible;
+  }
+
+  show(back: boolean) {
+    this.isVisible = back;
   }
 
 }

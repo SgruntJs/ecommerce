@@ -1,6 +1,10 @@
 @import "../../../assets/common/styles.scss";
 .address-form {
   width: 375px;
+  padding: 0 16px;
+  @include respond-to(desktop) {
+    padding: 0 16px;
+  }
   &-title {
     border-radius: 8px 8px 0 0;
     padding: 0;

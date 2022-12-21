@@ -44,4 +44,4 @@
     </div>
   </div>
 </div>
-<app-options *ngIf="isVisible"></app-options>
+<app-options *ngIf="isVisible" (backEvent)="show($event)"></app-options>
