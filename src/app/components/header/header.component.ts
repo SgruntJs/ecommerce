@@ -7,6 +7,7 @@ import { NAVIGATION } from "./navigation";
 import { Observable } from 'rxjs';
 import { AddressFormComponent } from "../address-form/address-form.component";
 import { MatBottomSheet } from "@angular/material/bottom-sheet";
+import { DataService } from "src/app/services/data/data.service";
 
 @Component({
   selector: "app-header",
@@ -21,8 +22,10 @@ export class HeaderComponent {
   selectFocusClass = false;
   navigationLinks = NAVIGATION;
   navigationLinks$!: Observable<Navigation[]>;
+  //change after select address
+  locaObj: any;
 
-  constructor(private navService: NavigationService,private bottomSheet: MatBottomSheet) {
+  constructor(private navService: NavigationService,private bottomSheet: MatBottomSheet,private dataService: DataService) {
     this.navigationLinks$ = of(this.navigationLinks);
    }
 
@@ -32,6 +35,7 @@ export class HeaderComponent {
   }
 
   ngOnInit(): void {
+    this.getNewObj();
   }
 
   toggleSideNav() {
@@ -47,5 +51,12 @@ export class HeaderComponent {
   ];
 
   categories$ = of(this.categories);
+
+  getNewObj() {
+    this.dataService.dataObj.subscribe((res) => {
+      console.log("res new", res);
+      this.locaObj = res;
+    });
+  }
   
 }
