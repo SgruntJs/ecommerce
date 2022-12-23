@@ -1,15 +1,12 @@
-<div class="header_menu_searchbar">
-  <div
-    class="select"
-    *ngIf="categories$ | async as categories"
-    [class.nav-focus]="selectFocusClass"
-  >
+<div class="header_menu_searchbar" [class.nav-focus]="selectFocusInputClass">
+  <div class="select" *ngIf="categories$ | async as categories">
     <select
       (focus)="selectFocusClass = true"
       (blur)="selectFocusClass = false"
       (change)="changeWidth($event.target)"
       #select
       [ngStyle]="{ width: selectWidth }"
+      [class.nav-focus]="selectFocusClass"
     >
       <option value="tutte">Tutte le categorie</option>
       <option value="{{ category.value }}" *ngFor="let category of categories">
@@ -17,7 +14,12 @@
       </option>
     </select>
   </div>
-  <input type="text" class="header_menu_input" />
+  <input
+    type="text"
+    class="header_menu_input"
+    (focus)="selectFocusInputClass = true"
+    (blur)="selectFocusInputClass = false"
+  />
   <div class="header_menu_searchbar_icon">
     <mat-icon>search</mat-icon>
   </div>

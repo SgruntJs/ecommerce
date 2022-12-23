@@ -1,7 +1,7 @@
 @import "../../../assets/common/styles.scss";
 :host {
   display: flex;
-  flex-grow: 10;
+  flex-grow: 2;
 }
 .header_menu_searchbar {
   display: none;
@@ -13,11 +13,17 @@
     flex: 1;
     font-size: 12px;
   }
+  &.nav-focus {
+    border-radius: 0.25em;
+  }
   .header_menu_input {
     height: 20px;
     padding: 10px;
     border: none;
     width: 100%;
+    &:focus {
+      outline: 0;
+    }
   }
   .header_menu_searchbar_icon {
     background-color: $orange;
@@ -29,6 +35,7 @@
     align-items: center;
     border-top-right-radius: 0.25em;
     border-bottom-right-radius: 0.25em;
+    cursor: pointer;
   }
 
   select {
@@ -38,11 +45,14 @@
     border: 0;
     box-shadow: none;
     /* Personalize */
+    font-family: "Amazon Regular" !important;
     flex: 1;
     padding: 0 1em;
     color: $darkGrey;
     background-image: none;
     cursor: pointer;
+    border-top-left-radius: 0.25em;
+    border-bottom-left-radius: 0.25em;
   }
   /* Remove IE arrow */
   select::-ms-expand {
@@ -52,15 +62,13 @@
   .select {
     position: relative;
     display: flex;
-
     height: 40px;
-    border-top-left-radius: 0.25em;
-    border-bottom-left-radius: 0.25em;
-    // overflow: hidden;
     background-color: #f3f3f3;
     color: #333;
+    border-top-left-radius: 0.25em;
+    border-bottom-left-radius: 0.25em;
     @include respond-to(desktop) {
-      //width: 20em;
+
     }
   }
   /* Arrow */
@@ -73,70 +81,5 @@
     transition: 0.25s all ease;
     pointer-events: none;
   }
-  /* Transition */
-  .select:hover::after {
-    // color: #f39c12;
-  }
 }
 
-.nav-search {
-  display: flex;
-  padding: 10px 4px 10px 3px;
-    height: 60px;
-  .nav-search-scope {
-    background-color: #f3f3f3;
-    background-image: none;
-    border-left: 1px solid #f3f3f3;
-    border-top: 1px solid #f3f3f3;
-    border-bottom: 1px solid #f3f3f3;
-  }
-  .nav-search-field {
-    display: flex;
-    position: static;
-    float: none;
-    flex: 1 1 0px;
-  }
-  .nav-searchbar {
-    display: flex;
-    position: static;
-    float: none;
-    flex: 1 1 0px;
-  }
-  .nav-search-facade {
-    position: relative;
-    float: left;
-    cursor: default;
-    overflow: hidden;
-    top: 3px;
-    .nav-search-label {
-      display: block;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      color: #555;
-      font-size: 12px;
-      line-height: 33px;
-      margin-right: 21px;
-      margin-left: 5px;
-      min-width: 19px;
-    }
-    .nav-icon {
-      position: absolute;
-      top: 14px;
-      right: 8px;
-      border-style: solid;
-      _border-style: dashed;
-      border-width: 4px;
-      border-color: transparent;
-      border-top: 4px solid #666;
-      border-bottom-width: 0;
-      width: 0;
-      height: 0;
-      font-size: 0;
-      line-height: 0;
-      background-image: url(https://m.media-amazon.com/images/G/29/gno/sprites/nav-sprite-global-1x-hm-dsk-reorg._CB405936745_.png);
-      background-position: 0 1000px;
-      background-repeat: repeat-x;
-    }
-  }
-}

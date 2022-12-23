@@ -10,6 +10,7 @@ import { Category } from 'src/app/models/category.model';
 export class SearchbarComponent {
   selectedCar!: string;
   selectFocusClass = false;
+  selectFocusInputClass = false;
   selectedValue!: string;
 
   @ViewChild('select') select!: ElementRef;
@@ -26,7 +27,6 @@ export class SearchbarComponent {
   }
 
   changeWidth(value: any): void {
-    console.log('select', this.select.nativeElement.offsetWidth);
     const selectedValue = value.value;
     console.log(selectedValue);
     var text;
@@ -39,6 +39,10 @@ export class SearchbarComponent {
       this.selectWidth = (text.length * 7.5) + 40 + 'px';
       console.log('text',text);
     })
+  }
+
+  onKeydown(e: any) {
+    console.log('keydown', e.target?.value)
   }
 
 }
