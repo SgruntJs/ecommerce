@@ -36,6 +36,9 @@
     border-top-right-radius: 0.25em;
     border-bottom-right-radius: 0.25em;
     cursor: pointer;
+    &:hover {
+      background-color: $orangeHover;
+    }
   }
 
   select {
@@ -63,8 +66,8 @@
     position: relative;
     display: flex;
     height: 40px;
-    background-color: #f3f3f3;
-    color: #333;
+    background-color: $buttonBgGrey;
+    color: $buttonColorDarkGrey;
     border-top-left-radius: 0.25em;
     border-bottom-left-radius: 0.25em;
     @include respond-to(desktop) {
