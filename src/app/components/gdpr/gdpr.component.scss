@@ -18,6 +18,7 @@
     position: absolute;
     right: 20px;
     top: 20px;
+    z-index: 10;
     &:after {
       content: "";
       border: solid;
@@ -46,6 +47,27 @@
         margin-bottom: 8px;
         @include respond-to(desktop) {
           font-size: 18px;
+        }
+      }
+      .gdpr-paragraph {
+        height: 250px;
+        overflow-y: hidden;
+        margin-bottom: 20px;
+        &:before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          background: linear-gradient(transparent 150px, white);
+        }
+        @include respond-to(desktop) {
+            height: auto;
+            overflow-y: auto;
+            &:before {
+                content:none;
+            }
         }
       }
       p {
@@ -90,6 +112,7 @@
           width: 100%;
           @include respond-to(desktop) {
             height: 29px;
+            padding: 5px 10px;
           }
 
           &.btn-yellow {

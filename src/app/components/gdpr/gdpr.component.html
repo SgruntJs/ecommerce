@@ -1,6 +1,6 @@
-<div class="gdpr">
+<div class="gdpr" *ngIf="!hide">
   <div class="gdpr-continue">
-    <span class="a-link">Continua senza accettare</span>
+    <span class="a-link" #btnContinue>Continua senza accettare</span>
   </div>
   <div class="gdpr-container">
     <div class="gdpr-container-left">
