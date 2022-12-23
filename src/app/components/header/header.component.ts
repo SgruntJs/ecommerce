@@ -1,5 +1,5 @@
-import { Component } from "@angular/core";
-import { of } from "rxjs";
+import { Component, ElementRef, ViewChild } from "@angular/core";
+import { filter, map, of, switchMap, toArray } from "rxjs";
 import { Category } from "src/app/models/category.model";
 import { Navigation } from "src/app/models/navigation.model";
 import { NavigationService } from "src/app/services/navigation/navigation.service";
@@ -17,13 +17,13 @@ import { DataService } from "src/app/services/data/data.service";
 export class HeaderComponent {
 
   lang = '.it';// dovrebbe cambiare a seconda della nazione
-  selectedValue!: string;
-  selectedCar!: string;
-  selectFocusClass = false;
+
   navigationLinks = NAVIGATION;
   navigationLinks$!: Observable<Navigation[]>;
   //change after select address
   locaObj: any;
+  
+
 
   constructor(private navService: NavigationService,private bottomSheet: MatBottomSheet,private dataService: DataService) {
     this.navigationLinks$ = of(this.navigationLinks);
@@ -38,13 +38,14 @@ export class HeaderComponent {
     this.getNewObj();
   }
 
+
   toggleSideNav() {
     this.navService.setShowNav(true);
   }
 
   categories: Category[] = [
     { value: "alexa-skill", viewValue: "Alexa Skill" },
-    { value: "saab", viewValue: "Alimentari e cura della casa" },
+    { value: "alimentari", viewValue: "Alimentari e cura della casa" },
     { value: "amazon-warehouse", viewValue: "Amazon Warehouse" },
     { value: "film-tv", viewValue: "Film e TV" },
     { value: "auto-moto", viewValue: "Auto e Moto - Parti e Accessori" },

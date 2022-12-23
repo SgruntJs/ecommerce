@@ -29,6 +29,7 @@ import { AddressComponent } from './components/address/address.component';
 import { AddressFormComponent } from './components/address-form/address-form.component';
 import { CustomDropdownComponent } from './components/custom-dropdown/custom-dropdown.component';
 import { OptionsComponent } from './components/options/options.component';
+import { SearchbarComponent } from './components/searchbar/searchbar.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { OptionsComponent } from './components/options/options.component';
     AddressComponent,
     AddressFormComponent,
     CustomDropdownComponent,
-    OptionsComponent
+    OptionsComponent,
+    SearchbarComponent
   ],
   imports: [
     BrowserModule,

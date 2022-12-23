@@ -16,7 +16,7 @@
       .nav-progressive-attribute {
         background-position: -71px -378px;
         width: 15px;
-        height: 18px;       
+        height: 18px;
       }
     }
 
@@ -67,6 +67,10 @@
   display: flex;
   padding: 2px 8px 5px 8px;
   width: 100%;
+  @include respond-to(desktop) {
+    justify-content: space-between;
+  }
+
   &_left {
     display: flex;
     flex-direction: row;
@@ -120,33 +124,12 @@
   align-items: center;
   color: $white;
 }
-.header_menu_searchbar {
+.header_menu_center {
   display: none;
   @include respond-to(desktop) {
     display: flex;
-    margin-top: 8px;
-    height: 40px;
-    justify-content: center;
-    flex: 1;
-    font-size: 12px;
+    width: 54%;
   }
-}
-.header_menu_input {
-  height: 20px;
-  padding: 10px;
-  border: none;
-  width: 100%;
-}
-.header_menu_searchbar_icon {
-  background-color: $orange;
-  height: 40px;
-  width: 56px;
-  color: $black;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border-top-right-radius: 0.25em;
-  border-bottom-right-radius: 0.25em;
 }
 
 .header_menu_right {
@@ -307,53 +290,6 @@
 
 :root {
   --background-gradient: linear-gradient(30deg, #f39c12 30%, #f1c40f);
-}
-
-select {
-  /* Reset Select */
-  appearance: none;
-  outline: 0;
-  border: 0;
-  box-shadow: none;
-  /* Personalize */
-  flex: 1;
-  padding: 0 1em;
-  color: $darkGrey;
-  background-image: none;
-  cursor: pointer;
-}
-/* Remove IE arrow */
-select::-ms-expand {
-  display: none;
-}
-/* Custom Select wrapper */
-.select {
-  position: relative;
-  display: flex;
-
-  height: 40px;
-  border-top-left-radius: 0.25em;
-  border-bottom-left-radius: 0.25em;
-  overflow: hidden;
-  background-color: #f3f3f3;
-  color: #333;
-  @include respond-to(desktop) {
-    width: 20em;
-  }
-}
-/* Arrow */
-.select::after {
-  content: "\25BC";
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1em;
-  transition: 0.25s all ease;
-  pointer-events: none;
-}
-/* Transition */
-.select:hover::after {
-  // color: #f39c12;
 }
 
 /* Other styles*/

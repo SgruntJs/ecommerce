@@ -1,0 +1,104 @@
+<div class="header_menu_searchbar">
+  <div
+    class="select"
+    *ngIf="categories$ | async as categories"
+    [class.nav-focus]="selectFocusClass"
+  >
+    <select
+      (focus)="selectFocusClass = true"
+      (blur)="selectFocusClass = false"
+      (change)="changeWidth($event.target)"
+      #select
+      [ngStyle]="{ width: selectWidth }"
+    >
+      <option value="tutte">Tutte le categorie</option>
+      <option value="{{ category.value }}" *ngFor="let category of categories">
+        {{ category.viewValue }}
+      </option>
+    </select>
+  </div>
+  <input type="text" class="header_menu_input" />
+  <div class="header_menu_searchbar_icon">
+    <mat-icon>search</mat-icon>
+  </div>
+</div>
+
+<!--<div class="nav-search">
+    <div id="nav-bar-left"></div>
+    <form id="nav-search-bar-form" class="nav-searchbar nav-progressive-attribute">
+ 
+      <div class="nav-left">
+        <div id="nav-search-dropdown-card">
+          
+    <div class="nav-search-scope nav-sprite">
+      <div class="nav-search-facade" data-value="search-alias=aps">
+        <span id="nav-search-label-id" class="nav-search-label nav-progressive-content" style="width: auto;">Tutte le categorie</span>
+        <i class="nav-icon"></i>
+      </div>
+      <span id="searchDropdownDescription" class="nav-progressive-attribute" style="display:none">Seleziona la categoria in cui desideri effettuare la ricerca</span>
+      <select aria-describedby="searchDropdownDescription" class="nav-search-dropdown searchSelect nav-progressive-attrubute nav-progressive-search-dropdown" data-nav-digest="6cnsfEKg1mLt44tTroQM/4/+wFk=" data-nav-selected="0" id="searchDropdownBox" name="url" style="display: block; top: 2.5px;" tabindex="0" title="Ricerca in">
+          <option selected="selected" value="search-alias=aps">Tutte le categorie</option>
+          <option value="search-alias=alexa-skills">Alexa Skill</option>
+          <option value="search-alias=grocery">Alimentari e cura della casa</option>
+          <option value="search-alias=amazon-global-store">Amazon Global Store</option>
+          <option value="search-alias=warehouse-deals">Amazon Warehouse</option>
+          <option value="search-alias=mobile-apps">App e Giochi</option>
+          <option value="search-alias=audible">Audiolibri Audible</option>
+          <option value="search-alias=automotive">Auto e Moto - Parti e Accessori</option>
+          <option value="search-alias=beauty">Bellezza</option>
+          <option value="search-alias=gift-cards">Buoni Regalo</option>
+          <option value="search-alias=office-products">Cancelleria e prodotti per ufficio</option>
+          <option value="search-alias=kitchen">Casa e cucina</option>
+          <option value="search-alias=popular">CD e Vinili</option>
+          <option value="search-alias=amazon-devices">Dispositivi Amazon</option>
+          <option value="search-alias=electronics">Elettronica</option>
+          <option value="search-alias=diy">Fai da te</option>
+          <option value="search-alias=dvd">Film e TV</option>
+          <option value="search-alias=garden">Giardino e giardinaggio</option>
+          <option value="search-alias=toys">Giochi e giocattoli</option>
+          <option value="search-alias=appliances">Grandi elettrodomestici</option>
+          <option value="search-alias=handmade">Handmade</option>
+          <option value="search-alias=lighting">Illuminazione</option>
+          <option value="search-alias=industrial">Industria e Scienza</option>
+          <option value="search-alias=computers">Informatica</option>
+          <option value="search-alias=specialty-aps-sns">Iscriviti e Risparmia</option>
+          <option value="search-alias=digital-text">Kindle Store</option>
+          <option value="search-alias=stripbooks">Libri</option>
+          <option value="search-alias=luxury">Luxury Stores</option>
+          <option value="search-alias=under-ten-dollars">Meno di 10€</option>
+          <option value="search-alias=fashion">Moda</option>
+          <option value="search-alias=fashion-womens">&nbsp;&nbsp;&nbsp;Donna</option>
+          <option value="search-alias=fashion-mens">&nbsp;&nbsp;&nbsp;Uomo</option>
+          <option value="search-alias=fashion-girls">&nbsp;&nbsp;&nbsp;Bambina</option>
+          <option value="search-alias=fashion-boys">&nbsp;&nbsp;&nbsp;Bambino</option>
+          <option value="search-alias=fashion-baby">&nbsp;&nbsp;&nbsp;Prima infanzia</option>
+          <option value="search-alias=digital-music">Musica Digitale</option>
+          <option value="search-alias=baby">Prima infanzia</option>
+          <option value="search-alias=instant-video">Prime Video</option>
+          <option value="search-alias=hpc">Salute e cura della persona</option>
+          <option value="search-alias=software">Software</option>
+          <option value="search-alias=sporting">Sport e tempo libero</option>
+          <option value="search-alias=mi">Strumenti musicali e DJ</option>
+          <option value="search-alias=fashion-luggage">Valigie e accessori da viaggio</option>
+          <option value="search-alias=videogames">Videogiochi</option>
+      </select>
+    </div>
+  
+        </div>
+      </div>
+      <div class="nav-fill">
+        <div class="nav-search-field ">
+          <input type="text" id="twotabsearchtextbox" value="" name="field-keywords" autocomplete="off" placeholder="" class="nav-input nav-progressive-attribute" dir="auto" tabindex="0" aria-label="Ricerca" spellcheck="false">
+        </div>
+        <div id="nav-iss-attach"></div>
+      </div>
+      <div class="nav-right">
+        <div class="nav-search-submit nav-sprite">
+          <span id="nav-search-submit-text" class="nav-search-submit-text nav-sprite nav-progressive-attribute" aria-label="VAI">
+            <input id="nav-search-submit-button"  class="nav-input nav-progressive-attribute" value="VAI" tabindex="0">
+          </span>
+        </div>
+      </div>
+    </form>
+  </div>
+-->
