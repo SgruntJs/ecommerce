@@ -17,7 +17,7 @@ h6 {
 }
 
 .nav-focus {
-  box-shadow: 0 0 0 2px #f90, 0 0 3px rgb(255 153 0 / 50%)!important;
+  box-shadow: 0 0 0 2px #f90, 0 0 3px rgb(255 153 0 / 50%) !important;
 }
 
 html,
@@ -126,10 +126,11 @@ body {
 }
 
 .mdc-dialog__surface {
-  border-radius: var(--mdc-dialog-container-shape, var(--mdc-shape-medium, 10px))!important;
+  border-radius: var(
+    --mdc-dialog-container-shape,
+    var(--mdc-shape-medium, 10px)
+  ) !important;
 }
-
-
 
 // overrides.scss or styles.scss
 // This fixes https://github.com//issues/4609
@@ -150,37 +151,37 @@ body {
   }
 }
 
-
 .mat-bottom-sheet-container {
-  padding: 8px 0!important;
+  padding: 8px 0 !important;
 }
 
-.options-item{
+.options-item {
   .mat-mdc-radio-button {
     width: 100%;
     .mdc-form-field {
-      flex-direction: row-reverse!important;
-      width: 100%!important;
+      flex-direction: row-reverse !important;
+      width: 100% !important;
       .mdc-radio {
         right: 20px;
       }
     }
   }
   .mat-mdc-radio-button.mat-accent {
-    --mdc-radio-selected-focus-icon-color: #008296!important;
-    --mdc-radio-selected-hover-icon-color: #008296!important;
-    --mdc-radio-selected-icon-color: #008296!important;
-    --mdc-radio-selected-pressed-icon-color: #008296!important;
-    --mat-mdc-radio-checked-ripple-color: transparent!important;
-}
+    --mdc-radio-selected-focus-icon-color: #008296 !important;
+    --mdc-radio-selected-hover-icon-color: #008296 !important;
+    --mdc-radio-selected-icon-color: #008296 !important;
+    --mdc-radio-selected-pressed-icon-color: #008296 !important;
+    --mat-mdc-radio-checked-ripple-color: transparent !important;
+  }
 
-.mat-radio-inner-circle{
-  height: 20px!important;
-  width: 20px!important;
-}
-
+  .mat-radio-inner-circle {
+    height: 20px !important;
+    width: 20px !important;
+  }
 }
 
 .mat-bottom-sheet-container {
   font-family: "Amazon Regular" !important;
 }
+
+

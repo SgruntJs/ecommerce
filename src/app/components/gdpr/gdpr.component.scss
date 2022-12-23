@@ -1,0 +1,115 @@
+@import "../../../assets/common/styles.scss";
+.gdpr {
+  background-color: #f6f6f6;
+  border: 1px #ddd solid;
+  bottom: 0;
+  display: flex;
+  left: 0;
+  margin: 0;
+  padding: 60px 20px;
+  position: fixed;
+  right: 0;
+  z-index: 1000;
+
+  @include respond-to(desktop) {
+    padding: 60px 15%;
+  }
+  .gdpr-continue {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    &:after {
+      content: "";
+      border: solid;
+      padding: 1.75px;
+      border-width: 1px 1px 0 0;
+      transform: rotate(45deg);
+      position: absolute;
+      color: $amazonBlue;
+      top: 9px;
+      right: -6px;
+    }
+  }
+  &-container {
+    display: flex;
+    flex-direction: column;
+    @include respond-to(desktop) {
+      flex-direction: row;
+    }
+
+    &-left {
+      flex-grow: 1;
+      h4 {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 8px;
+        @include respond-to(desktop) {
+          font-size: 18px;
+        }
+      }
+      p {
+        padding: 0;
+        margin: 0 0 14px 0;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+    &-right {
+      display: flex;
+      flex-shrink: 0;
+      padding-left: 0px;
+      gap: 5px;
+      flex-direction: column;
+      @include respond-to(desktop) {
+        padding-left: 20px;
+        flex-direction: row;
+        align-items: center;
+      }
+      .gdpr-container-btn {
+        border-radius: 7px;
+        background: 0 0;
+        box-shadow: none;
+        display: block;
+        position: relative;
+        overflow: hidden;
+
+        background: 0 0;
+        box-shadow: none;
+        @include respond-to(desktop) {
+          height: 29px;
+        }
+
+        white-space: nowrap;
+        .btn {
+          cursor: pointer;
+          padding: 10px;
+          border: 1px solid #d5d9d9;
+          cursor: pointer;
+          border-radius: 7px;
+          width: 100%;
+          @include respond-to(desktop) {
+            height: 29px;
+          }
+
+          &.btn-yellow {
+            background: #ffd814;
+            border-color: #fcd200;
+            &:hover {
+              background: #f7ca00;
+              border-color: #f2c200;
+            }
+          }
+          &.btn-white {
+            background: $white;
+            border-color: #d5d9d9;
+            &:hover {
+              background-color: #f7fafa;
+              border-color: #d5d9d9;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -63,6 +63,13 @@ $breakpoints: (
   background-size: 350px;
 }
 
+.a-link {
+  color: $link;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 
 
