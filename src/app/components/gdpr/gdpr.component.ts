@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { fromEvent, Subscription } from 'rxjs';
 
 @Component({
@@ -9,9 +9,15 @@ import { fromEvent, Subscription } from 'rxjs';
 export class GdprComponent implements AfterViewInit, OnDestroy {
 
   hide = false;
+  showMoreText = false;
 
   @ViewChild('btnContinue') btnContinue!: ElementRef;
+  @ViewChild('show') showParagraph!: ElementRef;
   clickedElement: Subscription = new Subscription();
+
+  constructor(private renderer: Renderer2) {
+
+  }
 
   ngAfterViewInit() {
       this.toggleHide();
@@ -32,5 +38,12 @@ export class GdprComponent implements AfterViewInit, OnDestroy {
     this.hide = !this.hide;
   }
 
+
+  showMore() {
+    console.log(this.showParagraph.nativeElement);
+    //const el = this.showParagraph.nativeElement;
+    // this.renderer.addClass(el, 'show');
+    this.showMoreText = !this.showMoreText;
+  }
 
 }

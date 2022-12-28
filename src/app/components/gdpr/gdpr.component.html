@@ -1,11 +1,11 @@
-<div class="gdpr" *ngIf="!hide">
+<div class="gdpr" *ngIf="!hide" [ngClass]="{'show': showMoreText}">
   <div class="gdpr-continue">
     <span class="a-link" #btnContinue>Continua senza accettare</span>
   </div>
   <div class="gdpr-container">
     <div class="gdpr-container-left">
       <h4>Selezione delle preferenze relative ai cookie</h4>
-      <div class="gdpr-paragraph">
+      <div class="gdpr-paragraph" #show >
         <p>
           Utilizziamo cookie e altre tecnologie simili necessari per consentirti
           di effettuare acquisti, per migliorare le tue esperienze di acquisto e
@@ -36,6 +36,7 @@
           <span class="a-link">Informativa sulla privacy</span>.
         </p>
       </div>
+      <span class="show-more" (click)="showMore()"></span>
     </div>
     <div class="gdpr-container-right">
       <div class="gdpr-container-btn">
