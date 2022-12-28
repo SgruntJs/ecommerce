@@ -27,5 +27,10 @@ export class GdprComponent implements AfterViewInit, OnDestroy {
     this.clickedElement.unsubscribe();
   }
 
+  acceptCookies() {
+    // save all cookies and hide container
+    this.hide = !this.hide;
+  }
+
 
 }
