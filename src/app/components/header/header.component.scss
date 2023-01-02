@@ -138,6 +138,9 @@
   display: flex;
   background-color: $black;
   justify-content: center;
+  @include respond-to(desktop) {
+    display: none;
+  }
 }
 
 .header_menu_right {
