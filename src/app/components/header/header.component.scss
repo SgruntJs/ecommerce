@@ -134,6 +134,11 @@
     width: 100%;
   }
 }
+.searchbar--mobile {
+  display: flex;
+  background-color: $black;
+  justify-content: center;
+}
 
 .header_menu_right {
   display: flex;

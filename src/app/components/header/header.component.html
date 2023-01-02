@@ -11,7 +11,7 @@
         </div>
         <app-address></app-address>
       </div>
-      <div class="header_menu_center">
+      <div class="header_menu_center only-desktop">
         <app-searchbar [categories]="categories"></app-searchbar>
       </div>
       <div class="header_menu_right">
@@ -42,6 +42,9 @@
       </div>
     </div>
   </nav>
+  <div class="searchbar--mobile only-mobile">
+    <app-searchbar></app-searchbar>
+  </div>
   <nav class="header_bottom">
     <div class="header_menu_icon" (click)="toggleSideNav()">
       <mat-icon>menu</mat-icon>

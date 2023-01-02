@@ -1,5 +1,5 @@
 <div class="header_menu_searchbar" [class.nav-focus]="selectFocusInputClass">
-  <div class="select" *ngIf="categories$ | async as categories">
+  <div class="select only-desktop" *ngIf="categories$ | async as categories">
     <select
       (focus)="selectFocusClass = true"
       (blur)="selectFocusClass = false"

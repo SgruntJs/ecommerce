@@ -71,5 +71,19 @@ $breakpoints: (
   }
 }
 
+.only-mobile {
+  display: block;
+  @include respond-to(desktop){
+    display: none;;
+  }
+}
+
+.only-desktop {
+  display: none;
+  @include respond-to(desktop){
+    display: block
+  }
+}
+
 
 
