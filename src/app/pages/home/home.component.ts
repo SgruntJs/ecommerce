@@ -78,40 +78,51 @@ export class HomeComponent {
 
   luxury: Slide[] = [
     {
-      url: "https://www.amazon.it/Kerastase-Resistance-Architecte-riparatore-danneggiati/dp/B01KNWRJYY/?_encoding=UTF8&pd_rd_w=3Wptt&content-id=amzn1.sym.39a22cac-f46b-45dd-bc4d-2d2bf131702e&pf_rd_p=39a22cac-f46b-45dd-bc4d-2d2bf131702e&pf_rd_r=EMYF5DPHJT43F53EJAP8&pd_rd_wg=5jiWq&pd_rd_r=b70bcfa0-af57-462a-a9e2-0df2f6b754fd&ref_=pd_gw_unk",
+      url: "https://m.media-amazon.com/images/I/61TATdb6k+L._AC_SY200_.jpg",
       title: "kerastase",
     },
     {
-      url: "https://www.amazon.it/Kerastase-Chroma-Absolu-Respect-Shampoo/dp/B09QGN33G1/?_encoding=UTF8&pd_rd_w=3Wptt&content-id=amzn1.sym.39a22cac-f46b-45dd-bc4d-2d2bf131702e&pf_rd_p=39a22cac-f46b-45dd-bc4d-2d2bf131702e&pf_rd_r=EMYF5DPHJT43F53EJAP8&pd_rd_wg=5jiWq&pd_rd_r=b70bcfa0-af57-462a-a9e2-0df2f6b754fd&ref_=pd_gw_unk",
+      url: "https://m.media-amazon.com/images/I/510aS5yFEwL._AC_SY200_.jpg",
       title: "kerastase",
     },
     {
-      url: "https://www.amazon.it/Kerastase-Trattamento-Capelli-200-ml/dp/B01KWR8VVU/?_encoding=UTF8&pd_rd_w=3Wptt&content-id=amzn1.sym.39a22cac-f46b-45dd-bc4d-2d2bf131702e&pf_rd_p=39a22cac-f46b-45dd-bc4d-2d2bf131702e&pf_rd_r=EMYF5DPHJT43F53EJAP8&pd_rd_wg=5jiWq&pd_rd_r=b70bcfa0-af57-462a-a9e2-0df2f6b754fd&ref_=pd_gw_unk",
+      url: "https://m.media-amazon.com/images/I/61KXlCWry-L._AC_SY200_.jpg",
       title: "kerastase 3"
     },
     {
-      url: "https://www.amazon.it/Kerastase-Resistance-Architecte-riparatore-danneggiati/dp/B01KNWRJYY/?_encoding=UTF8&pd_rd_w=3Wptt&content-id=amzn1.sym.39a22cac-f46b-45dd-bc4d-2d2bf131702e&pf_rd_p=39a22cac-f46b-45dd-bc4d-2d2bf131702e&pf_rd_r=EMYF5DPHJT43F53EJAP8&pd_rd_wg=5jiWq&pd_rd_r=b70bcfa0-af57-462a-a9e2-0df2f6b754fd&ref_=pd_gw_unk",
+      url: "https://m.media-amazon.com/images/I/61ywrV9V8-L._AC_SY200_.jpg",
       title: "kerastase",
     },
     {
-      url: "https://www.amazon.it/Kerastase-Chroma-Absolu-Respect-Shampoo/dp/B09QGN33G1/?_encoding=UTF8&pd_rd_w=3Wptt&content-id=amzn1.sym.39a22cac-f46b-45dd-bc4d-2d2bf131702e&pf_rd_p=39a22cac-f46b-45dd-bc4d-2d2bf131702e&pf_rd_r=EMYF5DPHJT43F53EJAP8&pd_rd_wg=5jiWq&pd_rd_r=b70bcfa0-af57-462a-a9e2-0df2f6b754fd&ref_=pd_gw_unk",
+      url: "https://m.media-amazon.com/images/I/51Q+OPSnO8L._AC_SY200_.jpg",
       title: "kerastase",
     },
     {
-      url: "https://www.amazon.it/Kerastase-Trattamento-Capelli-200-ml/dp/B01KWR8VVU/?_encoding=UTF8&pd_rd_w=3Wptt&content-id=amzn1.sym.39a22cac-f46b-45dd-bc4d-2d2bf131702e&pf_rd_p=39a22cac-f46b-45dd-bc4d-2d2bf131702e&pf_rd_r=EMYF5DPHJT43F53EJAP8&pd_rd_wg=5jiWq&pd_rd_r=b70bcfa0-af57-462a-a9e2-0df2f6b754fd&ref_=pd_gw_unk",
+      url: "https://m.media-amazon.com/images/I/515rd3-TM9L._AC_SY200_.jpg",
       title: "kerastase 3"
     },
     {
-      url: "https://www.amazon.it/Kerastase-Resistance-Architecte-riparatore-danneggiati/dp/B01KNWRJYY/?_encoding=UTF8&pd_rd_w=3Wptt&content-id=amzn1.sym.39a22cac-f46b-45dd-bc4d-2d2bf131702e&pf_rd_p=39a22cac-f46b-45dd-bc4d-2d2bf131702e&pf_rd_r=EMYF5DPHJT43F53EJAP8&pd_rd_wg=5jiWq&pd_rd_r=b70bcfa0-af57-462a-a9e2-0df2f6b754fd&ref_=pd_gw_unk",
+      url: "https://m.media-amazon.com/images/I/61PrN4O6+1L._AC_SY200_.jpg",
       title: "kerastase",
     },
     {
-      url: "https://www.amazon.it/Kerastase-Chroma-Absolu-Respect-Shampoo/dp/B09QGN33G1/?_encoding=UTF8&pd_rd_w=3Wptt&content-id=amzn1.sym.39a22cac-f46b-45dd-bc4d-2d2bf131702e&pf_rd_p=39a22cac-f46b-45dd-bc4d-2d2bf131702e&pf_rd_r=EMYF5DPHJT43F53EJAP8&pd_rd_wg=5jiWq&pd_rd_r=b70bcfa0-af57-462a-a9e2-0df2f6b754fd&ref_=pd_gw_unk",
+      url: "https://m.media-amazon.com/images/I/51Q+OPSnO8L._AC_SY200_.jpg",
       title: "kerastase",
     },
     {
-      url: "https://www.amazon.it/Kerastase-Trattamento-Capelli-200-ml/dp/B01KWR8VVU/?_encoding=UTF8&pd_rd_w=3Wptt&content-id=amzn1.sym.39a22cac-f46b-45dd-bc4d-2d2bf131702e&pf_rd_p=39a22cac-f46b-45dd-bc4d-2d2bf131702e&pf_rd_r=EMYF5DPHJT43F53EJAP8&pd_rd_wg=5jiWq&pd_rd_r=b70bcfa0-af57-462a-a9e2-0df2f6b754fd&ref_=pd_gw_unk",
-      title: "kerastase 8"
+      url: "https://m.media-amazon.com/images/I/515rd3-TM9L._AC_SY200_.jpg",
+      title: "kerastase 3"
+    },
+    {
+      url: "https://m.media-amazon.com/images/I/51Q+OPSnO8L._AC_SY200_.jpg",
+      title: "kerastase",
+    },
+    {
+      url: "https://m.media-amazon.com/images/I/61QOvoZVArL._AC_SY200_.jpg",
+      title: "kerastase 3"
     },
   ];
 }
+
+
+//https://stackoverflow.com/questions/59366833/why-vs-code-contains-emphasized-items-but-no-error

@@ -8,12 +8,17 @@
       <app-product-carousel
         [slides]="products"
         [title]="'La vetrina dei nuovi capi'"
+        [variableWidth]="false"
+        [slidesToShow]="7"
       ></app-product-carousel>
     </div>
     <div class="products-carousel_container">
       <app-product-carousel
         [slides]="luxury"
         [title]="'Trattamento Professionale di Lusso'"
+        [variableWidth]="true"
+        [slidesToShow]="1"
+        [slidesToScroll]="5"
       ></app-product-carousel>
     </div>
   </div>

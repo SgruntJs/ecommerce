@@ -21,39 +21,51 @@ export class ProductCarouselComponent implements OnInit, AfterViewInit {
   @ViewChild("button") button!: ElementRef;
   buttonSubscription = new Subscription();
   buttonSubscription2 = new Subscription();
+  @Input() variableWidth = false;
+  @Input() slidesToShow = 7;
+  @Input() slidesToScroll = 6;
+  slideConfig = {};
 
   constructor(private renderer: Renderer2) {}
 
   ngOnInit() {
     this.preloadImages(); // for the demo
+    console.log('slider', this.slidesToShow)
   }
 
   ngAfterViewInit() {
     this.buttonClickPrev();
     this.buttonClickNext();
+    this.slideConfig = {
+      slidesToShow: this.slidesToShow,
+      slidesToScroll: this.slidesToScroll,
+      infinite: false,
+      adaptiveHeight: true,
+      variableWidth: this.variableWidth,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 2,
+          },
+        },
+        {
+          breakpoint: 728,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    };
   }
 
-  slideConfig = {
-    slidesToShow: 7,
-    slidesToScroll: 6,
-    infinite: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 728,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+
+
+
+
+  
 
   slickInit(e: any) {
     console.log("slick initialized");
@@ -63,6 +75,8 @@ export class ProductCarouselComponent implements OnInit, AfterViewInit {
   }
   afterChange(e: any) {
     console.log("afterChange");
+    this.slideConfig;
+    console.log(this.slideConfig);
   }
   beforeChange(e: any) {
     console.log("beforeChange");
