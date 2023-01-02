@@ -2,13 +2,12 @@ import {
   Component,
   Input,
   OnInit,
-  HostListener,
   AfterViewInit,
   ViewChild,
   ElementRef,
   Renderer2,
 } from "@angular/core";
-import { fromEvent, skip, Subscription, take } from "rxjs";
+import { fromEvent, skip, Subscription } from "rxjs";
 import { Slide } from "src/app/models/slide";
 @Component({
   selector: "app-product-carousel",

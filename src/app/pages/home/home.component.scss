@@ -9,6 +9,7 @@
     margin: 0px 20px;
     @include respond-to(desktop) {
         height: 285px;
+        margin-bottom: 20px;
     }
 }
 .main_container {
