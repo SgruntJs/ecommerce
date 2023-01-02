@@ -19,6 +19,8 @@ export class SearchbarComponent {
   @Input() categories!: Category[];
   categories$!: Observable<Category[]>
 
+  @Input() placeholder!: string;
+
   constructor() { }
 
   ngOnInit() {

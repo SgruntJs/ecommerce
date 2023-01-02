@@ -22,7 +22,7 @@ export class HeaderComponent {
   navigationLinks$!: Observable<Navigation[]>;
   //change after select address
   locaObj: any;
-  
+  placeholderText = 'Ricerca Amazon.it';
 
 
   constructor(private navService: NavigationService,private bottomSheet: MatBottomSheet,private dataService: DataService) {
