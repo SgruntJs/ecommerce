@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { filter, Observable, of, switchMap, toArray } from 'rxjs';
 import { Category } from 'src/app/models/category.model';
 
@@ -20,6 +20,8 @@ export class SearchbarComponent {
   categories$!: Observable<Category[]>
 
   @Input() placeholder!: string;
+
+  @Output() showLayer = new EventEmitter<boolean>();
 
   constructor() { }
 
@@ -43,8 +45,9 @@ export class SearchbarComponent {
     })
   }
 
-  onKeydown(e: any) {
-    console.log('keydown', e.target?.value)
+  handleFocus(val: boolean) {
+    this.showLayer.emit(val);
+    this.selectFocusInputClass = val;
   }
 
 }

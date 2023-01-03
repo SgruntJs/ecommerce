@@ -12,7 +12,7 @@
         <app-address></app-address>
       </div>
       <div class="header_menu_center only-desktop">
-        <app-searchbar [categories]="categories"></app-searchbar>
+        <app-searchbar [categories]="categories" (showLayer)="show($event)"></app-searchbar>
       </div>
       <div class="header_menu_right">
         <div class="header_menu_signin">
@@ -62,4 +62,5 @@
       <div>{{locaObj.text}}: {{locaObj.value}}</div>
     </div>
   </nav>
+  <div class="nav-cover--focus" *ngIf="isVisible"></div>
 </div>

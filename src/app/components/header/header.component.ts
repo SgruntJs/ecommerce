@@ -23,6 +23,7 @@ export class HeaderComponent {
   //change after select address
   locaObj: any;
   placeholderText = 'Ricerca Amazon.it';
+  isVisible = false;
 
 
   constructor(private navService: NavigationService,private bottomSheet: MatBottomSheet,private dataService: DataService) {
@@ -58,6 +59,10 @@ export class HeaderComponent {
       console.log("res new", res);
       this.locaObj = res;
     });
+  }
+
+  show(back: boolean) {
+    this.isVisible = back;
   }
   
 }
