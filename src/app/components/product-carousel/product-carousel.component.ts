@@ -30,7 +30,7 @@ export class ProductCarouselComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.preloadImages(); // for the demo
-    console.log('slider', this.slidesToShow)
+    
   }
 
   ngAfterViewInit() {
@@ -41,6 +41,7 @@ export class ProductCarouselComponent implements OnInit, AfterViewInit {
       slidesToScroll: this.slidesToScroll,
       infinite: false,
       adaptiveHeight: true,
+      mobileFirst:true,
       variableWidth: this.variableWidth,
       responsive: [
         {
@@ -48,6 +49,7 @@ export class ProductCarouselComponent implements OnInit, AfterViewInit {
           settings: {
             slidesToShow: 4,
             slidesToScroll: 2,
+            variableWidth: false
           },
         },
         {
