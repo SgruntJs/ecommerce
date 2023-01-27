@@ -1,11 +1,19 @@
-<p>products works!</p>
-<ng-container *ngIf="products$ | async as products">
-<ul>
-    <li *ngFor="let product of products">
-        {{product?.name}}-{{product?.price}}€
-    </li>
-</ul>
-</ng-container>
+<div>BREADCRUMB TO DO</div>
+<main class="main main--products">
+    <div class="filters">
+        filtri di ricerca
+    </div>
+    <div class="products-list">
+        <ng-container *ngIf="products$ | async as products">
+            <ul>
+                <li *ngFor="let product of products">
+                    {{product?.name}}-{{product?.price}}€
+                </li>
+            </ul>
+            </ng-container>
+    </div>
+</main>
+
 
 
 

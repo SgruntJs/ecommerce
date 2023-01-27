@@ -1,0 +1,12 @@
+@import "../../../assets/common/styles.scss";
+
+.main--products {
+    display: flex;
+
+    .filters {
+        width: calc(.2 * (100vw - 28px));
+    }
+    .products-list {
+        width: 100%;
+    }
+}
