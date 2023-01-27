@@ -32,6 +32,7 @@ import { CustomDropdownComponent } from './components/custom-dropdown/custom-dro
 import { OptionsComponent } from './components/options/options.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { GdprComponent } from './components/gdpr/gdpr.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { GdprComponent } from './components/gdpr/gdpr.component';
     MatDialogModule,
     MatBottomSheetModule,
     MatRadioModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

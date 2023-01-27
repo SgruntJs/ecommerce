@@ -1,4 +1,11 @@
 <p>products works!</p>
+<ng-container *ngIf="products$ | async as products">
+<ul>
+    <li *ngFor="let product of products">
+        {{product?.name}}-{{product?.price}}€
+    </li>
+</ul>
+</ng-container>
 
 
 
