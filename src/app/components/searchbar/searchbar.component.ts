@@ -1,4 +1,5 @@
 import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { filter, Observable, of, switchMap, toArray } from 'rxjs';
 import { Category } from 'src/app/models/category.model';
 
@@ -22,8 +23,9 @@ export class SearchbarComponent {
   @Input() placeholder!: string;
 
   @Output() showLayer = new EventEmitter<boolean>();
+  query!: string;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.categories$ = of(this.categories);
@@ -48,6 +50,10 @@ export class SearchbarComponent {
   handleFocus(val: boolean) {
     this.showLayer.emit(val);
     this.selectFocusInputClass = val;
+  }
+
+  search() {
+    this.router.navigate(['/products'], { queryParams: { q: this.query } });
   }
 
 }

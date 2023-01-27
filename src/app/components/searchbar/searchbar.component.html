@@ -20,8 +20,9 @@
     (focus)="handleFocus(true)"
     (blur)="handleFocus(false)"
     placeholder="{{placeholder}}"
+    [(ngModel)]="query"
   />
-  <div class="header_menu_searchbar_icon">
+  <div class="header_menu_searchbar_icon" (click)="search()">
     <mat-icon>search</mat-icon>
   </div>
 </div>
