@@ -1,13 +1,21 @@
 <div class="product-card">
   <div class="product-card__amazon-choice">
-    <span class="product-card__badge" *ngIf="product.amazonChoice">Più venduto</span></div>
-  <div class="product-card__image">
-    
-    <img src="{{product.thumbImage}}" alt="{{product.name}}" />
-    
+    <span class="product-card__badge" *ngIf="product.amazonChoice"
+      >Più venduto</span
+    >
   </div>
-  <div class="product-card__sponsor">Sponsorizzato</div>
-  <div class="product-card__title">{{product.name}}</div>
-  <div class="product-card__rating"><span>4.5</span></div>
-</div>
+  <div class="product-card__image">
+    <img src="{{ product.thumbImage }}" alt="{{ product.name }}" />
+  </div>
+  <div class="product-card__body">
+    <div class="product-card__sponsor">Sponsorizzato</div>
+    <div class="product-card__title">
+      <h2>{{ product.name }}</h2>
+    </div>
+    <div class="product-card__rating"><span>4.5</span></div>
+    <div class="product-card__price-info">
+      <span class="product-card__price">{{product.price}}</span><span class="price-symbol">€</span>
+    </div>
+  </div>
 
+</div>

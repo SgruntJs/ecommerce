@@ -32,7 +32,7 @@
 .header_top {
   height: 60px;
   background-color: $black;
-  font-size: 14px;
+  font-size: $fs-14;
   display: flex;
   color: $white;
   padding-right: 0px;
@@ -224,7 +224,7 @@
   /* padding-top: 5px;
     padding-bottom: 5px; */
   padding-left: 8px;
-  font-size: 14px;
+  font-size: $fs-14;
   color: $white;
   display: flex;
   align-items: center;

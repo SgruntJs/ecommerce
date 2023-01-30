@@ -20,7 +20,7 @@
 
       margin-right: 28px;
       line-height: 24px;
-      font-size: 16px;
+      font-size: $fs-16;
     }
   }
   &-body {
@@ -170,7 +170,7 @@
             option {
               background-color: $white;
               padding-left: 0;
-              font-size: 14px;
+              font-size: $fs-14;
             }
           }
         }
@@ -223,7 +223,7 @@
     option {
       background-color: $white;
       padding-left: 0;
-      font-size: 14px;
+      font-size: $fs-14;
       padding: 2px 12px 1px 13px;
       height: calc(1.2em + 24px);
       &:hover {
