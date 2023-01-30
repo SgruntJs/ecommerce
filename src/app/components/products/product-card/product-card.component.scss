@@ -1,9 +1,33 @@
 @import "../../../../assets/common/styles.scss";
 
 :host {
-    flex: 1 0 25%;
-    
-    .product-card {
+  flex: 1 0 calc(25% - 8px);
+  flex-basis: calc(20% - 10px);
+  .product-card {
+    border: 1px solid #f5f5f5;
+    &__amazon-choice{
+        position: relative;
+        top: 0;
+        height: 26px;
+        background-color: #f5f5f5;
+      }
+    &__image {
+      background-color: #f5f5f5;
+      position: relative;
+      padding-top: 100%;
+      
+      img {
+      
+        position: absolute;
+        margin: auto;
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-width: 100%;
+        max-height: 100%;
         
+      }
     }
+  }
 }

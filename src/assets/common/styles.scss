@@ -50,7 +50,7 @@ $breakpoints: (
 
 .main {
   width: 100%;
-
+  background-color: #eaeded;
   @include respond-to(desktop) {
     max-width: 1500px;
     width: 100%;
@@ -59,7 +59,7 @@ $breakpoints: (
 }
 .main--products {
   width: 100%;
-
+  background-color: $white;
   @include respond-to(desktop) {
     max-width: 1800px;
     width: 100%;

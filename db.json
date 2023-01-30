@@ -8,7 +8,8 @@
       "rating": 4.5,
       "description": "Tecnologia Bluetooth 5.3 e Accoppiamento Automatico: Gli Cuffie Bluetooth sono dotati di un chip Bluetooth 5.3 per garantire una connessione più stabile, minore latanza e minor consumo energetico durante la trasmissione dei dati, La distanza di trasmissione è maggiore (fino a 15 m). Gli auricolari wireless adottano Interruttori di sala. Dopo la prima connessione, questi auricolari bluetooth si collegano automaticamente al dispositivo non appena si apre la custodia di ricarica.",
       "thumbImage": "https://m.media-amazon.com/images/I/51V2kIo1AhL._AC_UL320_.jpg",
-      "category": ["Informatica", "Telefonia", "Audio e Hi-Fi"]
+      "category": ["Informatica", "Telefonia", "Audio e Hi-Fi"],
+      "amazonChoice": true
     },
     {
       "id": 2,
@@ -19,6 +20,60 @@
       "description": "Tecnologia Bluetooth 5.3 e Accoppiamento Automatico: Gli Cuffie Bluetooth sono dotati di un chip Bluetooth 5.3 per garantire una connessione più stabile, minore latanza e minor consumo energetico durante la trasmissione dei dati, La distanza di trasmissione è maggiore (fino a 15 m). Gli auricolari wireless adottano Interruttori di sala. Dopo la prima connessione, questi auricolari bluetooth si collegano automaticamente al dispositivo non appena si apre la custodia di ricarica.",
       "thumbImage": "https://m.media-amazon.com/images/I/41bthmW4tLL._AC_UL320_.jpg",
       "category": ["Informatica", "Telefonia", "Audio e Hi-Fi"]
+    },
+    {
+      "id": 3,
+      "name": "Cuffie Bluetooth, Auricolari Bluetooth 5.3 con Stereo 3D Immersivo, 36 Ore di Riproduzione e Carica Rapida Type-C, Controllo Volume Touch, Cuffie Wireless Impermeabile IPX8 per Sport, Studio, Viaggi [Classe di efficienza energetica A+++]",
+      "price": 29.98,
+      "sponsor": false,
+      "rating": 5,
+      "description": "Tecnologia Bluetooth 5.3 e Accoppiamento Automatico: Gli Cuffie Bluetooth sono dotati di un chip Bluetooth 5.3 per garantire una connessione più stabile, minore latanza e minor consumo energetico durante la trasmissione dei dati, La distanza di trasmissione è maggiore (fino a 15 m). Gli auricolari wireless adottano Interruttori di sala. Dopo la prima connessione, questi auricolari bluetooth si collegano automaticamente al dispositivo non appena si apre la custodia di ricarica.",
+      "thumbImage": "https://m.media-amazon.com/images/I/41bthmW4tLL._AC_UL320_.jpg",
+      "category": ["Informatica", "Telefonia", "Audio e Hi-Fi"],
+      "amazonChoice": false
+    },
+    {
+      "id": 4,
+      "name": "Cuffie Bluetooth, Auricolari Bluetooth 5.3 con Stereo 3D Immersivo, 36 Ore di Riproduzione e Carica Rapida Type-C, Controllo Volume Touch, Cuffie Wireless Impermeabile IPX8 per Sport, Studio, Viaggi [Classe di efficienza energetica A+++]",
+      "price": 29.98,
+      "sponsor": false,
+      "rating": 5,
+      "description": "Tecnologia Bluetooth 5.3 e Accoppiamento Automatico: Gli Cuffie Bluetooth sono dotati di un chip Bluetooth 5.3 per garantire una connessione più stabile, minore latanza e minor consumo energetico durante la trasmissione dei dati, La distanza di trasmissione è maggiore (fino a 15 m). Gli auricolari wireless adottano Interruttori di sala. Dopo la prima connessione, questi auricolari bluetooth si collegano automaticamente al dispositivo non appena si apre la custodia di ricarica.",
+      "thumbImage": "https://m.media-amazon.com/images/I/41bthmW4tLL._AC_UL320_.jpg",
+      "category": ["Informatica", "Telefonia", "Audio e Hi-Fi"],
+      "amazonChoice": true
+    },{
+      "id": 1,
+      "name": "Cuffie Bluetooth 5.3, Auricolari Bluetooth con 4 Mic, Cuffie Wireless In Ear HiFi Stereo, Ricarica Rápida USB-C, Cuffie Senza Fili IPX7 Impermeabile Cuffiette Bluetooth Controllo Touch, Display LED",
+      "price": 29.99,
+      "sponsor": true,
+      "rating": 4.5,
+      "description": "Tecnologia Bluetooth 5.3 e Accoppiamento Automatico: Gli Cuffie Bluetooth sono dotati di un chip Bluetooth 5.3 per garantire una connessione più stabile, minore latanza e minor consumo energetico durante la trasmissione dei dati, La distanza di trasmissione è maggiore (fino a 15 m). Gli auricolari wireless adottano Interruttori di sala. Dopo la prima connessione, questi auricolari bluetooth si collegano automaticamente al dispositivo non appena si apre la custodia di ricarica.",
+      "thumbImage": "https://m.media-amazon.com/images/I/51V2kIo1AhL._AC_UL320_.jpg",
+      "category": ["Informatica", "Telefonia", "Audio e Hi-Fi"],
+      "amazonChoice": false
+    },
+    {
+      "id": 5,
+      "name": "Cuffie Bluetooth 5.3, Auricolari Bluetooth con 4 Mic, Cuffie Wireless In Ear HiFi Stereo, Ricarica Rápida USB-C, Cuffie Senza Fili IPX7 Impermeabile Cuffiette Bluetooth Controllo Touch, Display LED",
+      "price": 29.99,
+      "sponsor": true,
+      "rating": 4.5,
+      "description": "Tecnologia Bluetooth 5.3 e Accoppiamento Automatico: Gli Cuffie Bluetooth sono dotati di un chip Bluetooth 5.3 per garantire una connessione più stabile, minore latanza e minor consumo energetico durante la trasmissione dei dati, La distanza di trasmissione è maggiore (fino a 15 m). Gli auricolari wireless adottano Interruttori di sala. Dopo la prima connessione, questi auricolari bluetooth si collegano automaticamente al dispositivo non appena si apre la custodia di ricarica.",
+      "thumbImage": "https://m.media-amazon.com/images/I/51V2kIo1AhL._AC_UL320_.jpg",
+      "category": ["Informatica", "Telefonia", "Audio e Hi-Fi"],
+      "amazonChoice": false
+    },
+    {
+      "id": 6,
+      "name": "Cuffie Bluetooth 5.3, Auricolari Bluetooth con 4 Mic, Cuffie Wireless In Ear HiFi Stereo, Ricarica Rápida USB-C, Cuffie Senza Fili IPX7 Impermeabile Cuffiette Bluetooth Controllo Touch, Display LED",
+      "price": 29.99,
+      "sponsor": true,
+      "rating": 4.5,
+      "description": "Tecnologia Bluetooth 5.3 e Accoppiamento Automatico: Gli Cuffie Bluetooth sono dotati di un chip Bluetooth 5.3 per garantire una connessione più stabile, minore latanza e minor consumo energetico durante la trasmissione dei dati, La distanza di trasmissione è maggiore (fino a 15 m). Gli auricolari wireless adottano Interruttori di sala. Dopo la prima connessione, questi auricolari bluetooth si collegano automaticamente al dispositivo non appena si apre la custodia di ricarica.",
+      "thumbImage": "https://m.media-amazon.com/images/I/51V2kIo1AhL._AC_UL320_.jpg",
+      "category": ["Informatica", "Telefonia", "Audio e Hi-Fi"],
+      "amazonChoice": false
     }
   ]
 }
