@@ -5,6 +5,7 @@ $black: #0f1111;
 $orange: #febd69;
 $orangeHover: #f3a847;
 $darkOrange: #f08804;
+$bgOrange: #e67a00;
 $borderGrey: #DDDDDD;
 $lightGrey: #eaeded;
 $grey: #34495e;
@@ -25,6 +26,7 @@ $breakpoints: (
   "medium": 992px,
   "desktop": 1023px,
   "large": 1200px,
+  "extralarge": 1500px
 ) !default;
 
 /// Mixin to manage responsive breakpoints
