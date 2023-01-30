@@ -1,4 +1,4 @@
-@import "../../../assets/common/styles.scss";
+
 
 .main--products {
     display: flex;
@@ -8,5 +8,8 @@
     }
     .products-list {
         width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
     }
 }
