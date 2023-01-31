@@ -84,5 +84,21 @@
         font-size: 13px;
       }
     }
+    &__sponsor {
+      color: #565959;
+      font-size: 11px;
+      padding: 6px 0;
+      cursor: pointer;
+      .icon-info {
+        background-image: url(https://m.media-amazon.com/images/S/sash/OMJ6YLPcVKydtJQ.png);
+        background-size: 11px 22px;
+        background-repeat: no-repeat;
+        width: 11px;
+        height: 11px;
+        margin-bottom: 1px;
+        vertical-align: text-bottom;
+        display: inline-block;
+      }
+    }
   }
 }

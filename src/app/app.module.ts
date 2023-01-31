@@ -34,6 +34,8 @@ import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { GdprComponent } from './components/gdpr/gdpr.component';
 import { HttpClientModule } from '@angular/common/http';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +53,7 @@ import { HttpClientModule } from '@angular/common/http';
     CustomDropdownComponent,
     OptionsComponent,
     SearchbarComponent,
-    GdprComponent
+    GdprComponent,
   ],
   imports: [
     BrowserModule,
