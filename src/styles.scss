@@ -185,4 +185,32 @@ body {
   font-family: "Amazon Regular" !important;
 }
 
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  .tooltip {
+    min-width: 300px;
+    background-color: white;
+    color: #000;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    font-size: 14px;
+    border: 1px solid $borderGrey;
+  }
+  .tooltip:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: $borderGrey transparent transparent transparent;
+  }
+}
 

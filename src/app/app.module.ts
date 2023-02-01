@@ -33,6 +33,8 @@ import { OptionsComponent } from './components/options/options.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { GdprComponent } from './components/gdpr/gdpr.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PopoverDirective } from './shared/popover/popover.directive';
+import { TooltipModule } from './shared/tooltip/tooltip.module';
 
 
 
@@ -54,6 +56,7 @@ import { HttpClientModule } from '@angular/common/http';
     OptionsComponent,
     SearchbarComponent,
     GdprComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -71,8 +74,10 @@ import { HttpClientModule } from '@angular/common/http';
     MatRadioModule,
     ReactiveFormsModule,
     HttpClientModule
-  ],
+    ],
   providers: [],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+//https://stackoverflow.com/questions/40705819/angular2-cant-bind-to-directive-since-it-isnt-a-known-property-of-element

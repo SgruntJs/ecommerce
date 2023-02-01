@@ -1,0 +1,119 @@
+@import "../../../assets/common/styles.scss";
+.tooltip {
+  position: fixed;
+  background-color: $white;
+  border-radius: 4px;
+  color: $darkGrey;
+  font-family: Arial;
+  padding: 10px;
+  font-size: 14px;
+  opacity: 0;
+  max-width: 300px;
+  border: 1px solid $borderGrey;
+  &__link {
+    color: $link;
+    font-weight: 600;
+  }
+
+  &::before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+  }
+
+  &--visible {
+    opacity: 1;
+    transition: opacity 300ms;
+  }
+
+  &--light {
+    background-color: white;
+    color: $darkGrey;
+
+    &:before {
+      border-color:  #ccc  transparent transparent transparent ;
+      border-style: solid;
+      border-width: 10px;
+      content: "";
+      height: 0;
+      left: 50%;
+      margin-left: -5px;
+      position: absolute;
+      bottom: -20px;
+      width: 0;
+    }
+    &:after {
+      border-color: #fff transparent transparent transparent ;
+      border-style: solid;
+      border-width: 10px;
+      content: "";
+      height: 0;
+      left: 50%;
+      margin-left: -10px;
+      position: absolute;
+      bottom: -19px;
+      width: 0;
+    }
+  }
+
+  &--dark {
+    background-color: $buttonColorDarkGrey;
+    color: $white;
+
+    &::before {
+      border: 5px solid $buttonColorDarkGrey;
+    }
+  }
+
+  &--below {
+    transform:translateX(-50%);
+    margin-top: 7px;
+
+  }
+
+  &--above {
+    transform:translate(-50%, -100%);
+    margin-bottom: 7px;
+
+    &::before {
+      
+      left: calc(50% - 5px);
+      //bottom: -5px;
+    }
+  }
+
+  &--left {
+    transform:translate(calc(-100% - 7px), -50%);
+
+    &::before {
+      border-top-color: transparent;
+      border-bottom-color: transparent;
+      border-right: none;
+      right: -5px;
+      // top: calc(50% - 5px);
+    }
+  }
+
+  &--right {
+    transform:translateY(-50%);
+    margin-left: 7px;
+
+    &::before {
+      border-top-color: transparent;
+      border-bottom-color: transparent;
+      border-left: none;
+      left: -5px;
+      top: calc(50% - 5px);
+    }
+  }
+
+  &--dynamic {
+    margin-left: 20px;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+

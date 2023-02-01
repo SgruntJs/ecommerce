@@ -8,15 +8,21 @@
     <img src="{{ product.thumbImage }}" alt="{{ product.name }}" />
   </div>
   <div class="product-card__body">
-    <div class="product-card__sponsor">Sponsorizzato <span class="icon-info"></span></div>
-
+    <div
+      class="product-card__sponsor"
+      [position]="top"
+      [theme]="light"
+      [tooltip]="tooltipText"
+    >
+      Sponsorizzato <span class="icon-info"></span>
+    </div>
     <div class="product-card__title">
       <h2>{{ product.name }}</h2>
     </div>
     <div class="product-card__rating"><span>4.5</span></div>
     <div class="product-card__price-info">
-      <span class="product-card__price">{{product.price}}</span><span class="price-symbol">€</span>
+      <span class="product-card__price">{{ product.price }}</span
+      ><span class="price-symbol">€</span>
     </div>
   </div>
-
 </div>
