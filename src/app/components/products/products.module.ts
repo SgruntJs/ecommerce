@@ -7,6 +7,7 @@ import { PopoverDirective } from 'src/app/shared/popover/popover.directive';
 import { TooltipModule } from 'src/app/shared/tooltip/tooltip.module';
 import { Tooltip2Directive } from 'src/app/shared/tooltip2/tooltip2.directive';
 import { PopoverComponent } from 'src/app/shared/popover/popover.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -16,10 +17,10 @@ import { PopoverComponent } from 'src/app/shared/popover/popover.component';
     ProductCardComponent,
     PopoverDirective, 
     Tooltip2Directive,
-    PopoverComponent
+    PopoverComponent,
   ],
   imports: [
-    CommonModule, ProductsRoutingModule, TooltipModule
+    CommonModule, ProductsRoutingModule, TooltipModule,  MatIconModule,
   ],
     
     exports: [PopoverDirective,TooltipModule, Tooltip2Directive, PopoverComponent],

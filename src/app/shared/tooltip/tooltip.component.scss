@@ -10,6 +10,14 @@
   opacity: 0;
   max-width: 300px;
   border: 1px solid $borderGrey;
+  font-family: 'Amazon Regular';
+  .icon-close {
+    position: absolute;
+    right: -3px;
+    top: 3px;
+    cursor: pointer;
+    font-size: 12px;
+  }
   &__link {
     color: $link;
     font-weight: 600;
